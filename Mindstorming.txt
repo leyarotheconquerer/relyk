@@ -1,0 +1,72 @@
+The more you have the worse it is
+
+Collecting something to play game
+But the more you have the more things go wrong
+
+
+I.e. The more bullet packs you pick up, the more enemies you have
+The more money you get, the more monsters attack
+The more points you have the more difficult the game gets
+
+Sickness
+Galaga
+Building things (tower defense)
+
+The towers themselves spawn the monsters?
+
+The more power you have the more likely things are to overload
+but you need power to keep going? (but then you always maintain a minimum)
+could be good
+That would be some sort of vehicle (space or rover?)
+Or train
+Or dirigible
+Or B.O.A.T.
+
+Space game
+Top down
+Third person
+Twin stick
+Fly a spaceship
+
+At the beginning of each level (arg another UI) you select how many enemies there should be
+And how many traps
+And how many resources
+
+"How many?"
+Choose on a slider
+
+Spawns proportional pickups, enemy robots, and hazards
+* Autogen levels
+* Menu UI
+* Top down spaceship movement
+* Camera spring
+
+Control multiple characters
+Can control only one at a time
+When not controlled, you could lose them
+
+Tower defense
+The more towers you have, the weaker they become
+* Levels
+* Tower UI
+* Build timers
+* Wave spawning
+* Monster pathing
+* HP mechanism
+* Essentially a tick system
+* A lot of point distributions
+* Balancing difficult
+
+Defend the relic
+* You control robots
+* You can upgrade robots by combining robots of the same type
+* Robots are most powerful when they are the only robot of a given type
+* Robots become less powerful when they clone
+
+* Transformation animation ??? nope
+* Communicating what's going on to the player
+* Coming up with types of robots
+* Pathing AI
+* Pathing players
+* Combat animations
+* Health system again
