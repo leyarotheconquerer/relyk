@@ -5,10 +5,10 @@
 	<attribute name="Smoothing Constant" value="50" />
 	<attribute name="Snap Threshold" value="5" />
 	<attribute name="Elapsed Time" value="0" />
-	<attribute name="Next Replicated Node ID" value="5" />
-	<attribute name="Next Replicated Component ID" value="13" />
-	<attribute name="Next Local Node ID" value="16777239" />
-	<attribute name="Next Local Component ID" value="16777311" />
+	<attribute name="Next Replicated Node ID" value="6" />
+	<attribute name="Next Replicated Component ID" value="14" />
+	<attribute name="Next Local Node ID" value="16777240" />
+	<attribute name="Next Local Component ID" value="16777320" />
 	<attribute name="Variables" />
 	<attribute name="Variable Names" value="" />
 	<component type="Octree" id="1" />
@@ -32,6 +32,7 @@
 		<attribute name="Name" value="Cuboid" />
 		<attribute name="Tags">
 			<string value="debug" />
+			<string value="player" />
 		</attribute>
 		<attribute name="Position" value="0 0 -7.20682" />
 		<attribute name="Rotation" value="1 0 0 0" />
@@ -39,9 +40,11 @@
 		<attribute name="Variables" />
 		<component type="RigidBody" id="16777235">
 			<attribute name="Physics Position" value="0 0 -7.20682" />
+			<attribute name="Collision Layer" value="5" />
 		</component>
 		<component type="CollisionShape" id="16777237">
 			<attribute name="Size" value="2.5 2.5 2.5" />
+			<attribute name="Offset Position" value="0 2.25 0" />
 		</component>
 		<component type="ScriptInstance" id="16777238">
 			<attribute name="Delayed Method Calls" value="0" />
@@ -69,11 +72,22 @@
 			<attribute name="Max Speed" value="3" />
 			<attribute name="Height" value="2" />
 		</component>
+		<component type="ScriptInstance" id="16777316">
+			<attribute name="Delayed Method Calls" value="0" />
+			<attribute name="Script File" value="ScriptFile;Scripts/Attacker.as" />
+			<attribute name="Class Name" value="Attacker" />
+			<attribute name="Script Data" value="97 105 0 99 117 98 111 105 100 0 232 3 0 0 0 0 32 65 10 0 0 0" />
+			<attribute name="target_" value="ai" />
+			<attribute name="type_" value="cuboid" />
+			<attribute name="attackDelay_" value="1000" />
+			<attribute name="attackRange_" value="10" />
+			<attribute name="attackStrength_" value="10" />
+		</component>
 		<node id="2">
 			<attribute name="Is Enabled" value="true" />
 			<attribute name="Name" value="Model" />
 			<attribute name="Tags" />
-			<attribute name="Position" value="0 2.24493 0" />
+			<attribute name="Position" value="0 2.25 0" />
 			<attribute name="Rotation" value="1 0 0 0" />
 			<attribute name="Scale" value="0.01 0.01 0.01" />
 			<attribute name="Variables" />
@@ -154,8 +168,8 @@
 			<attribute name="Class Name" value="UnitSelection" />
 			<attribute name="Script Data" value="232 3 0 0" />
 			<attribute name="maxRayDistance_" value="1000" />
-			<attribute name="position_" value="0 0 0" />
-			<attribute name="normal_" value="0 0 0" />
+			<attribute name="position_" value="-31.2792 0.500004 1.87262" />
+			<attribute name="normal_" value="4.07237e-008 1 7.23977e-008" />
 		</component>
 		<component type="ScriptInstance" id="16777236">
 			<attribute name="Delayed Method Calls" value="0" />
@@ -183,6 +197,15 @@
 			<attribute name="Is Kinematic" value="true" />
 		</component>
 		<component type="Navigable" id="16777286" />
+		<component type="ScriptInstance" id="16777319">
+			<attribute name="Delayed Method Calls" value="0" />
+			<attribute name="Script File" value="ScriptFile;Scripts/Attackable.as" />
+			<attribute name="Class Name" value="Attackable" />
+			<attribute name="Script Data" value="232 3 0 0 232 3 0 0 109 111 110 111 108 105 116 104 0" />
+			<attribute name="healthPoints_" value="1000" />
+			<attribute name="maxHealthPoints_" value="1000" />
+			<attribute name="type_" value="monolith" />
+		</component>
 		<node id="16777232">
 			<attribute name="Is Enabled" value="true" />
 			<attribute name="Name" value="Model" />
@@ -194,6 +217,69 @@
 			<component type="StaticModel" id="16777284">
 				<attribute name="Model" value="Model;Models/Monolith.mdl" />
 				<attribute name="Material" value="Material;" />
+			</component>
+		</node>
+	</node>
+	<node id="16777239">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="EnemyCuboid" />
+		<attribute name="Tags">
+			<string value="ai" />
+		</attribute>
+		<attribute name="Position" value="-11.8692 0 0" />
+		<attribute name="Rotation" value="1 0 0 0" />
+		<attribute name="Scale" value="1 1 1" />
+		<attribute name="Variables" />
+		<component type="ScriptInstance" id="16777311">
+			<attribute name="Delayed Method Calls" value="0" />
+			<attribute name="Script File" value="ScriptFile;Scripts/Movable.as" />
+			<attribute name="Class Name" value="Movable" />
+			<attribute name="Script Data" value="0 0 0 64 0 0 64 64 0 0 160 64" />
+			<attribute name="height_" value="2" />
+			<attribute name="maxSpeed_" value="3" />
+			<attribute name="maxAccel_" value="5" />
+			<attribute name="crowdAgent_" value="0" />
+		</component>
+		<component type="CrowdAgent" id="16777312" />
+		<component type="ScriptInstance" id="16777313">
+			<attribute name="Delayed Method Calls" value="0" />
+			<attribute name="Script File" value="ScriptFile;Scripts/Attacker.as" />
+			<attribute name="Class Name" value="Attacker" />
+			<attribute name="Script Data" value="112 108 97 121 101 114 0 99 117 98 111 105 100 0 232 3 0 0 0 0 32 65 10 0 0 0" />
+			<attribute name="target_" value="player" />
+			<attribute name="type_" value="cuboid" />
+			<attribute name="attackDelay_" value="1000" />
+			<attribute name="attackRange_" value="10" />
+			<attribute name="attackStrength_" value="10" />
+		</component>
+		<component type="RigidBody" id="16777314">
+			<attribute name="Physics Position" value="-11.8692 0 0" />
+			<attribute name="Collision Layer" value="4" />
+		</component>
+		<component type="CollisionShape" id="16777315">
+			<attribute name="Size" value="2.5 2.5 2.5" />
+			<attribute name="Offset Position" value="0 2.25 0" />
+		</component>
+		<component type="ScriptInstance" id="16777318">
+			<attribute name="Delayed Method Calls" value="0" />
+			<attribute name="Script File" value="ScriptFile;Scripts/Attackable.as" />
+			<attribute name="Class Name" value="Attackable" />
+			<attribute name="Script Data" value="100 0 0 0 100 0 0 0 99 117 98 111 105 100 0" />
+			<attribute name="healthPoints_" value="100" />
+			<attribute name="maxHealthPoints_" value="100" />
+			<attribute name="type_" value="cuboid" />
+		</component>
+		<node id="5">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="Model" />
+			<attribute name="Tags" />
+			<attribute name="Position" value="0 2.27 0" />
+			<attribute name="Rotation" value="1 0 0 0" />
+			<attribute name="Scale" value="0.01 0.01 0.01" />
+			<attribute name="Variables" />
+			<component type="StaticModel" id="13">
+				<attribute name="Model" value="Model;Models/EnemyCuboid.mdl" />
+				<attribute name="Material" value="Material;Materials/Orange.xml" />
 			</component>
 		</node>
 	</node>

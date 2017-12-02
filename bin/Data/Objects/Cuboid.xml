@@ -4,6 +4,7 @@
 	<attribute name="Name" value="Cuboid" />
 	<attribute name="Tags">
 		<string value="debug" />
+		<string value="player" />
 	</attribute>
 	<attribute name="Position" value="0 0 -7.20682" />
 	<attribute name="Rotation" value="1 0 0 0" />
@@ -11,9 +12,11 @@
 	<attribute name="Variables" />
 	<component type="RigidBody" id="16777235">
 		<attribute name="Physics Position" value="0 0 -7.20682" />
+		<attribute name="Collision Layer" value="5" />
 	</component>
 	<component type="CollisionShape" id="16777237">
 		<attribute name="Size" value="2.5 2.5 2.5" />
+		<attribute name="Offset Position" value="0 2.25 0" />
 	</component>
 	<component type="ScriptInstance" id="16777238">
 		<attribute name="Delayed Method Calls" value="0" />
@@ -45,7 +48,7 @@
 		<attribute name="Is Enabled" value="true" />
 		<attribute name="Name" value="Model" />
 		<attribute name="Tags" />
-		<attribute name="Position" value="0 2.24493 0" />
+		<attribute name="Position" value="0 2.25 0" />
 		<attribute name="Rotation" value="1 0 0 0" />
 		<attribute name="Scale" value="0.01 0.01 0.01" />
 		<attribute name="Variables" />

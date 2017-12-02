@@ -20,6 +20,27 @@ namespace Relyk
 	{
 		URHO3D_PARAM(P_TARGET, Target);         // Urho3D::Vector3
 	}
+
+	URHO3D_EVENT(E_UNITATTACK, UnitAttack)
+	{
+		URHO3D_PARAM(P_DAMAGE, Damage);         // int
+		URHO3D_PARAM(P_TYPE, Type);             // Urho3D::String
+		URHO3D_PARAM(P_ATTACKER, Attacker);     // Urho3D::Node*
+	}
+
+	URHO3D_EVENT(E_UNITDAMAGED, UnitDamaged)
+	{
+		URHO3D_PARAM(P_DAMAGE, Damage);         // int
+		URHO3D_PARAM(P_TYPEMATCH, TypeMatch);   // bool
+		URHO3D_PARAM(P_HEALTH, Health);         // int
+		URHO3D_PARAM(P_MAXHEALTH, MaxHealth);   // int
+	}
+
+	URHO3D_EVENT(E_UNITDIED, UnitDied)
+	{
+		URHO3D_PARAM(P_TYPE, Type);             // Urho3D::String
+		URHO3D_PARAM(P_NODE, Node);             // Urho3D::Node*
+	}
 }
 
 #endif // Relyk_RelykEvents_H
