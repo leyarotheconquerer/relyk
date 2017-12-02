@@ -4,6 +4,9 @@ Makefile
 *.dll*
 *.exe
 *.log
+*.blend[0-9]
 
 .vscode/
 CMakeFiles/
+*/SourceData/Materials/
+*/SourceData/Textures/
