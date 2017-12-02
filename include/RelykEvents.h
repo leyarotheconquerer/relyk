@@ -15,6 +15,11 @@ namespace Relyk
 	{
 		URHO3D_PARAM(P_SELECT, Select);         // bool
 	}
+
+	URHO3D_EVENT(E_UNITMOVE, UnitMove)
+	{
+		URHO3D_PARAM(P_TARGET, Target);         // Urho3D::Vector3
+	}
 }
 
 #endif // Relyk_RelykEvents_H

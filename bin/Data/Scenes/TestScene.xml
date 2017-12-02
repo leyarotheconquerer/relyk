@@ -5,25 +5,40 @@
 	<attribute name="Smoothing Constant" value="50" />
 	<attribute name="Snap Threshold" value="5" />
 	<attribute name="Elapsed Time" value="0" />
-	<attribute name="Next Replicated Node ID" value="3" />
-	<attribute name="Next Replicated Component ID" value="5" />
-	<attribute name="Next Local Node ID" value="16777225" />
-	<attribute name="Next Local Component ID" value="16777239" />
+	<attribute name="Next Replicated Node ID" value="5" />
+	<attribute name="Next Replicated Component ID" value="13" />
+	<attribute name="Next Local Node ID" value="16777239" />
+	<attribute name="Next Local Component ID" value="16777311" />
 	<attribute name="Variables" />
 	<attribute name="Variable Names" value="" />
 	<component type="Octree" id="1" />
 	<component type="DebugRenderer" id="2" />
 	<component type="PhysicsWorld" id="4" />
+	<component type="NavigationMesh" id="8">
+		<attribute name="Agent Radius" value="1.5" />
+	</component>
+	<component type="CrowdManager" id="9">
+		<attribute name="Max Agent Radius" value="1" />
+		<attribute name="Navigation Mesh" value="8" />
+		<attribute name="Filter Types">
+			<variant type="Int" value="0" />
+		</attribute>
+		<attribute name="Obstacle Avoidance Types">
+			<variant type="Int" value="0" />
+		</attribute>
+	</component>
 	<node id="16777217">
 		<attribute name="Is Enabled" value="true" />
 		<attribute name="Name" value="Cuboid" />
-		<attribute name="Tags" />
-		<attribute name="Position" value="0 2.24493 -7.20682" />
+		<attribute name="Tags">
+			<string value="debug" />
+		</attribute>
+		<attribute name="Position" value="0 0 -7.20682" />
 		<attribute name="Rotation" value="1 0 0 0" />
 		<attribute name="Scale" value="1 1 1" />
 		<attribute name="Variables" />
 		<component type="RigidBody" id="16777235">
-			<attribute name="Physics Position" value="0 2.24493 -7.20682" />
+			<attribute name="Physics Position" value="0 0 -7.20682" />
 		</component>
 		<component type="CollisionShape" id="16777237">
 			<attribute name="Size" value="2.5 2.5 2.5" />
@@ -37,11 +52,28 @@
 			<attribute name="unselected_" value="Materials/DefaultGrey.xml" />
 			<attribute name="isSelected_" value="false" />
 		</component>
+		<component type="ScriptInstance" id="16777253">
+			<attribute name="Delayed Method Calls" value="0" />
+			<attribute name="Script File" value="ScriptFile;Scripts/Movable.as" />
+			<attribute name="Class Name" value="Movable" />
+			<attribute name="Script Data" value="0 0 0 64 0 0 64 64 0 0 160 64" />
+			<attribute name="height_" value="2" />
+			<attribute name="maxSpeed_" value="3" />
+			<attribute name="maxAccel_" value="5" />
+			<attribute name="crowdAgent_" value="0" />
+		</component>
+		<component type="CrowdAgent" id="16777288">
+			<attribute name="Target Position" value="2.6901 0.500009 -7.31837" />
+			<attribute name="Requested Target Type" value="Position" />
+			<attribute name="Max Accel" value="5" />
+			<attribute name="Max Speed" value="3" />
+			<attribute name="Height" value="2" />
+		</component>
 		<node id="2">
 			<attribute name="Is Enabled" value="true" />
 			<attribute name="Name" value="Model" />
 			<attribute name="Tags" />
-			<attribute name="Position" value="0 0 0" />
+			<attribute name="Position" value="0 2.24493 0" />
 			<attribute name="Rotation" value="1 0 0 0" />
 			<attribute name="Scale" value="0.01 0.01 0.01" />
 			<attribute name="Variables" />
@@ -86,27 +118,24 @@
 				<attribute name="Material" value="Material;Materials/DefaultGrey.xml" />
 			</component>
 		</node>
-	</node>
-	<node id="16777221">
-		<attribute name="Is Enabled" value="true" />
-		<attribute name="Name" value="Monolith" />
-		<attribute name="Tags" />
-		<attribute name="Position" value="0 0 0" />
-		<attribute name="Rotation" value="1 0 0 0" />
-		<attribute name="Scale" value="1 1 1" />
-		<attribute name="Variables" />
-		<node id="16777222">
+		<node id="16777229">
 			<attribute name="Is Enabled" value="true" />
-			<attribute name="Name" value="Model" />
+			<attribute name="Name" value="" />
 			<attribute name="Tags" />
-			<attribute name="Position" value="0 2.7 0" />
+			<attribute name="Position" value="0 0 0" />
 			<attribute name="Rotation" value="1 0 0 0" />
-			<attribute name="Scale" value="0.01 0.01 0.01" />
+			<attribute name="Scale" value="1 1 1" />
 			<attribute name="Variables" />
-			<component type="StaticModel" id="16777230">
-				<attribute name="Model" value="Model;Models/Monolith.mdl" />
-				<attribute name="Material" value="Material;" />
+			<component type="CollisionShape" id="16777266">
+				<attribute name="Size" value="100 1 100" />
+				<attribute name="Model" value="Model;Models/GroundCollision.mdl" />
 			</component>
+			<component type="RigidBody" id="16777267">
+				<attribute name="Collision Layer" value="2" />
+				<attribute name="Use Gravity" value="false" />
+				<attribute name="Is Kinematic" value="true" />
+			</component>
+			<component type="Navigable" id="16777268" />
 		</node>
 	</node>
 	<node id="16777223">
@@ -125,11 +154,47 @@
 			<attribute name="Class Name" value="UnitSelection" />
 			<attribute name="Script Data" value="232 3 0 0" />
 			<attribute name="maxRayDistance_" value="1000" />
+			<attribute name="position_" value="0 0 0" />
+			<attribute name="normal_" value="0 0 0" />
 		</component>
 		<component type="ScriptInstance" id="16777236">
 			<attribute name="Delayed Method Calls" value="0" />
 			<attribute name="Script File" value="ScriptFile;Scripts/KeyboardHandler.as" />
 			<attribute name="Class Name" value="KeyboardHandler" />
+			<attribute name="navMesh_" value="0" />
 		</component>
+	</node>
+	<node id="16777231">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="Monolith" />
+		<attribute name="Tags" />
+		<attribute name="Position" value="0 1 0" />
+		<attribute name="Rotation" value="1 0 0 0" />
+		<attribute name="Scale" value="1 1 1" />
+		<attribute name="Variables" />
+		<component type="CollisionShape" id="16777281">
+			<attribute name="Size" value="8 10 8" />
+			<attribute name="Offset Position" value="0 5 0" />
+		</component>
+		<component type="RigidBody" id="16777282">
+			<attribute name="Physics Position" value="0 1 0" />
+			<attribute name="Collision Layer" value="4" />
+			<attribute name="Use Gravity" value="false" />
+			<attribute name="Is Kinematic" value="true" />
+		</component>
+		<component type="Navigable" id="16777286" />
+		<node id="16777232">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="Model" />
+			<attribute name="Tags" />
+			<attribute name="Position" value="0 2.4009 0" />
+			<attribute name="Rotation" value="1 0 0 0" />
+			<attribute name="Scale" value="0.01 0.01 0.01" />
+			<attribute name="Variables" />
+			<component type="StaticModel" id="16777284">
+				<attribute name="Model" value="Model;Models/Monolith.mdl" />
+				<attribute name="Material" value="Material;" />
+			</component>
+		</node>
 	</node>
 </scene>

@@ -2,13 +2,15 @@
 <node id="16777217">
 	<attribute name="Is Enabled" value="true" />
 	<attribute name="Name" value="Cuboid" />
-	<attribute name="Tags" />
-	<attribute name="Position" value="0 2.24493 -7.20682" />
+	<attribute name="Tags">
+		<string value="debug" />
+	</attribute>
+	<attribute name="Position" value="0 0 -7.20682" />
 	<attribute name="Rotation" value="1 0 0 0" />
 	<attribute name="Scale" value="1 1 1" />
 	<attribute name="Variables" />
 	<component type="RigidBody" id="16777235">
-		<attribute name="Physics Position" value="0 2.24493 -7.20682" />
+		<attribute name="Physics Position" value="0 0 -7.20682" />
 	</component>
 	<component type="CollisionShape" id="16777237">
 		<attribute name="Size" value="2.5 2.5 2.5" />
@@ -22,11 +24,28 @@
 		<attribute name="unselected_" value="Materials/DefaultGrey.xml" />
 		<attribute name="isSelected_" value="false" />
 	</component>
+	<component type="ScriptInstance" id="16777253">
+		<attribute name="Delayed Method Calls" value="0" />
+		<attribute name="Script File" value="ScriptFile;Scripts/Movable.as" />
+		<attribute name="Class Name" value="Movable" />
+		<attribute name="Script Data" value="0 0 0 64 0 0 64 64 0 0 160 64" />
+		<attribute name="height_" value="2" />
+		<attribute name="maxSpeed_" value="3" />
+		<attribute name="maxAccel_" value="5" />
+		<attribute name="crowdAgent_" value="0" />
+	</component>
+	<component type="CrowdAgent" id="16777288">
+		<attribute name="Target Position" value="2.6901 0.500009 -7.31837" />
+		<attribute name="Requested Target Type" value="Position" />
+		<attribute name="Max Accel" value="5" />
+		<attribute name="Max Speed" value="3" />
+		<attribute name="Height" value="2" />
+	</component>
 	<node id="2">
 		<attribute name="Is Enabled" value="true" />
 		<attribute name="Name" value="Model" />
 		<attribute name="Tags" />
-		<attribute name="Position" value="0 0 0" />
+		<attribute name="Position" value="0 2.24493 0" />
 		<attribute name="Rotation" value="1 0 0 0" />
 		<attribute name="Scale" value="0.01 0.01 0.01" />
 		<attribute name="Variables" />

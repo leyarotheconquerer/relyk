@@ -7,6 +7,18 @@
 	<attribute name="Rotation" value="1 0 0 0" />
 	<attribute name="Scale" value="1 1 1" />
 	<attribute name="Variables" />
+	<component type="CollisionShape" id="16777250">
+		<attribute name="Size" value="8 10 8" />
+		<attribute name="Offset Position" value="0 5 0" />
+	</component>
+	<component type="RigidBody" id="16777251">
+		<attribute name="Collision Layer" value="4" />
+		<attribute name="Use Gravity" value="false" />
+		<attribute name="Is Kinematic" value="true" />
+	</component>
+	<component type="Obstacle" id="16777252">
+		<attribute name="Height" value="10" />
+	</component>
 	<node id="16777222">
 		<attribute name="Is Enabled" value="true" />
 		<attribute name="Name" value="Model" />
