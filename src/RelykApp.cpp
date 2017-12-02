@@ -6,6 +6,8 @@
 #include <Urho3D/Resource/ResourceCache.h>
 #include <Urho3D/Resource/ResourceEvents.h>
 
+#include "RelykEvents.h"
+
 using namespace Relyk;
 using namespace Urho3D;
 

@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<scene id="1">
+	<attribute name="Name" value="" />
+	<attribute name="Time Scale" value="1" />
+	<attribute name="Smoothing Constant" value="50" />
+	<attribute name="Snap Threshold" value="5" />
+	<attribute name="Elapsed Time" value="0" />
+	<attribute name="Next Replicated Node ID" value="3" />
+	<attribute name="Next Replicated Component ID" value="4" />
+	<attribute name="Next Local Node ID" value="16777224" />
+	<attribute name="Next Local Component ID" value="16777232" />
+	<attribute name="Variables" />
+	<attribute name="Variable Names" value="" />
+	<component type="Octree" id="1" />
+	<component type="DebugRenderer" id="2" />
+	<node id="16777217">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="Cuboid" />
+		<attribute name="Tags" />
+		<attribute name="Position" value="0 2.24493 -7.20682" />
+		<attribute name="Rotation" value="1 0 0 0" />
+		<attribute name="Scale" value="1 1 1" />
+		<attribute name="Variables" />
+		<node id="2">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="Model" />
+			<attribute name="Tags" />
+			<attribute name="Position" value="0 0 0" />
+			<attribute name="Rotation" value="1 0 0 0" />
+			<attribute name="Scale" value="0.01 0.01 0.01" />
+			<attribute name="Variables" />
+			<component type="StaticModel" id="3">
+				<attribute name="Model" value="Model;Models/Cuboid.mdl" />
+				<attribute name="Material" value="Material;Materials/DefaultGrey.xml" />
+			</component>
+		</node>
+	</node>
+	<node id="16777218">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="" />
+		<attribute name="Tags" />
+		<attribute name="Position" value="8.80003 5.45895 -18.3998" />
+		<attribute name="Rotation" value="0.900408 0.368863 0.21345 -0.0874425" />
+		<attribute name="Scale" value="1 1 1" />
+		<attribute name="Variables" />
+		<component type="Light" id="16777228">
+			<attribute name="Light Type" value="Directional" />
+			<attribute name="Range" value="30" />
+			<attribute name="Spot FOV" value="50" />
+		</component>
+	</node>
+	<node id="16777219">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="Ground" />
+		<attribute name="Tags" />
+		<attribute name="Position" value="0 0 0" />
+		<attribute name="Rotation" value="1 0 0 0" />
+		<attribute name="Scale" value="1 1 1" />
+		<attribute name="Variables" />
+		<node id="16777220">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="Model" />
+			<attribute name="Tags" />
+			<attribute name="Position" value="0 0 0" />
+			<attribute name="Rotation" value="1 0 0 0" />
+			<attribute name="Scale" value="0.05 0.05 0.05" />
+			<attribute name="Variables" />
+			<component type="StaticModel" id="16777229">
+				<attribute name="Model" value="Model;Models/Ground.mdl" />
+				<attribute name="Material" value="Material;Materials/DefaultGrey.xml" />
+			</component>
+		</node>
+	</node>
+	<node id="16777221">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="Monolith" />
+		<attribute name="Tags" />
+		<attribute name="Position" value="0 0 0" />
+		<attribute name="Rotation" value="1 0 0 0" />
+		<attribute name="Scale" value="1 1 1" />
+		<attribute name="Variables" />
+		<node id="16777222">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="Model" />
+			<attribute name="Tags" />
+			<attribute name="Position" value="0 2.7 0" />
+			<attribute name="Rotation" value="1 0 0 0" />
+			<attribute name="Scale" value="0.01 0.01 0.01" />
+			<attribute name="Variables" />
+			<component type="StaticModel" id="16777230">
+				<attribute name="Model" value="Model;Models/Monolith.mdl" />
+				<attribute name="Material" value="Material;" />
+			</component>
+		</node>
+	</node>
+	<node id="16777223">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="Camera" />
+		<attribute name="Tags" />
+		<attribute name="Position" value="0 60 -37" />
+		<attribute name="Rotation" value="0.866025 0.5 0 0" />
+		<attribute name="Scale" value="1 1 1" />
+		<attribute name="Variables" />
+	</node>
+</scene>
