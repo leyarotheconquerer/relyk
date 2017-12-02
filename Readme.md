@@ -70,3 +70,9 @@ power, defending it from the horde of broken robots that seek to tear it down.
 * Menu
 	* Start new game
 	* High score?
+
+## License and Credit
+
+This project is usable under the MIT license ([see here](License.md)).
+
+It heavily uses the Urho3D library/engine which is licensed under the MIT license and may be found [here](https://urho3d.github.io/).
