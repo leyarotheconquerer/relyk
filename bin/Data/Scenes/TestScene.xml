@@ -168,8 +168,8 @@
 			<attribute name="Class Name" value="UnitSelection" />
 			<attribute name="Script Data" value="232 3 0 0" />
 			<attribute name="maxRayDistance_" value="1000" />
-			<attribute name="position_" value="-31.2792 0.500004 1.87262" />
-			<attribute name="normal_" value="4.07237e-008 1 7.23977e-008" />
+			<attribute name="position_" value="-13.9642 0.500013 -1.86613" />
+			<attribute name="normal_" value="-2.98719e-007 1 7.24167e-008" />
 		</component>
 		<component type="ScriptInstance" id="16777236">
 			<attribute name="Delayed Method Calls" value="0" />
@@ -181,7 +181,9 @@
 	<node id="16777231">
 		<attribute name="Is Enabled" value="true" />
 		<attribute name="Name" value="Monolith" />
-		<attribute name="Tags" />
+		<attribute name="Tags">
+			<string value="player" />
+		</attribute>
 		<attribute name="Position" value="0 1 0" />
 		<attribute name="Rotation" value="1 0 0 0" />
 		<attribute name="Scale" value="1 1 1" />
@@ -225,8 +227,9 @@
 		<attribute name="Name" value="EnemyCuboid" />
 		<attribute name="Tags">
 			<string value="ai" />
+			<string value="debug" />
 		</attribute>
-		<attribute name="Position" value="-11.8692 0 0" />
+		<attribute name="Position" value="-6.92262 0 0" />
 		<attribute name="Rotation" value="1 0 0 0" />
 		<attribute name="Scale" value="1 1 1" />
 		<attribute name="Variables" />
@@ -253,7 +256,7 @@
 			<attribute name="attackStrength_" value="10" />
 		</component>
 		<component type="RigidBody" id="16777314">
-			<attribute name="Physics Position" value="-11.8692 0 0" />
+			<attribute name="Physics Position" value="-6.92262 0 0" />
 			<attribute name="Collision Layer" value="4" />
 		</component>
 		<component type="CollisionShape" id="16777315">

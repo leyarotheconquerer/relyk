@@ -56,7 +56,7 @@ class Attacker : ScriptObject
 			);
 			log.Debug("Evaluate attack for " + node.name + " (" + node.id + ")");
 
-			if (bodies.length > 0 && ContainsTarget(bodies))
+			if (bodies.length > 0)
 			{
 				log.Debug(bodies.length + " bodies in range");
 				Node@ target = GetTarget(bodies);
@@ -72,19 +72,6 @@ class Attacker : ScriptObject
 			}
 			timer_.Reset();
 		}
-	}
-
-	bool ContainsTarget(Array<RigidBody@>@ bodies)
-	{
-		for(uint i = 0; i < bodies.length; i++)
-		{
-			Node@ other = bodies[i].node;
-			if (other.HasTag(target_))
-			{
-				return true;
-			}
-		}
-		return false;
 	}
 
 	Node@ GetTarget(Array<RigidBody@>@ bodies)
@@ -113,8 +100,27 @@ class Attacker : ScriptObject
 
 	void HandlePostRenderUpdate(StringHash type, VariantMap& data)
 	{
-		if (input.keyDown[KEY_P] && node.HasTag("debug"))
-		{
+		if (
+			(input.keyDown[KEY_E] && node.HasTag("debug") && node.HasTag("ai")) ||
+			(input.keyDown[KEY_P] && node.HasTag("debug") && node.HasTag("player"))
+		) {
+			Array<RigidBody@>@ bodies = physicsWorld.GetRigidBodies(
+				Sphere(node.position, attackRange_),
+				ATTACKABLE_LAYER
+			);
+			Node@ target = GetTarget(bodies);
+
+			int multiplier = 3;
+			for(uint i = 0; i < bodies.length; i++)
+			{
+				Color color = Color(.5, 0, 0);
+				if (target !is null && target.id == bodies[i].node.id)
+				{
+					color = Color(1, .8, 0);
+				}
+				debugRenderer.AddLine(node.position + Vector3::UP * multiplier, bodies[i].node.position + Vector3::UP * multiplier, color);
+			}
+
 			debugRenderer.AddSphere(
 				Sphere(node.position, attackRange_),
 				Color(1,.5,0)
