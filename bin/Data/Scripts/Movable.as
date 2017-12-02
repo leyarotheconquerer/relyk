@@ -50,9 +50,12 @@ class Movable : ScriptObject
 	void Update(float timestep)
 	{
 		Vector3 direction = crowdAgent_.actualVelocity;
-		Quaternion rotation;
-		rotation.FromLookRotation(direction);
-		node.rotation = rotation;
+		if (direction.lengthSquared > 1)
+		{
+			Quaternion rotation;
+			rotation.FromLookRotation(direction);
+			node.rotation = rotation;
+		}
 	}
 
 	void HandleUnitMove(StringHash type, VariantMap& data)
