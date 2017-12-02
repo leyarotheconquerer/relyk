@@ -3,10 +3,25 @@
 	<attribute name="Is Enabled" value="true" />
 	<attribute name="Name" value="Cuboid" />
 	<attribute name="Tags" />
-	<attribute name="Position" value="0 0 0" />
+	<attribute name="Position" value="0 2.24493 -7.20682" />
 	<attribute name="Rotation" value="1 0 0 0" />
 	<attribute name="Scale" value="1 1 1" />
 	<attribute name="Variables" />
+	<component type="RigidBody" id="16777235">
+		<attribute name="Physics Position" value="0 2.24493 -7.20682" />
+	</component>
+	<component type="CollisionShape" id="16777237">
+		<attribute name="Size" value="2.5 2.5 2.5" />
+	</component>
+	<component type="ScriptInstance" id="16777238">
+		<attribute name="Delayed Method Calls" value="0" />
+		<attribute name="Script File" value="ScriptFile;Scripts/Selectable.as" />
+		<attribute name="Class Name" value="Selectable" />
+		<attribute name="Script Data" value="77 97 116 101 114 105 97 108 115 47 82 101 100 46 120 109 108 0 77 97 116 101 114 105 97 108 115 47 68 101 102 97 117 108 116 71 114 101 121 46 120 109 108 0" />
+		<attribute name="selected_" value="Materials/Red.xml" />
+		<attribute name="unselected_" value="Materials/DefaultGrey.xml" />
+		<attribute name="isSelected_" value="false" />
+	</component>
 	<node id="2">
 		<attribute name="Is Enabled" value="true" />
 		<attribute name="Name" value="Model" />
@@ -17,7 +32,7 @@
 		<attribute name="Variables" />
 		<component type="StaticModel" id="3">
 			<attribute name="Model" value="Model;Models/Cuboid.mdl" />
-			<attribute name="Material" value="Material;" />
+			<attribute name="Material" value="Material;Materials/DefaultGrey.xml" />
 		</component>
 	</node>
 </node>
