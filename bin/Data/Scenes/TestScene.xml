@@ -151,8 +151,8 @@
 			<attribute name="Class Name" value="UnitSelection" />
 			<attribute name="Script Data" value="232 3 0 0" />
 			<attribute name="maxRayDistance_" value="1000" />
-			<attribute name="position_" value="-28.0573 0.500002 17.0626" />
-			<attribute name="normal_" value="0 1 0" />
+			<attribute name="position_" value="-10.0878 0.500017 4.19109" />
+			<attribute name="normal_" value="1.64509e-007 1 -1.31607e-007" />
 		</component>
 	</node>
 	<node id="16777231">
@@ -211,13 +211,13 @@
 			<attribute name="Is Enabled" value="true" />
 			<attribute name="Name" value="Model" />
 			<attribute name="Tags" />
-			<attribute name="Position" value="0 2.4009 0" />
+			<attribute name="Position" value="0 0 0" />
 			<attribute name="Rotation" value="1 0 0 0" />
 			<attribute name="Scale" value="0.01 0.01 0.01" />
 			<attribute name="Variables" />
 			<component type="AnimatedModel" id="16777519">
 				<attribute name="Model" value="Model;Models/Monolith.mdl" />
-				<attribute name="Material" value="Material;Materials/Orange.xml" />
+				<attribute name="Material" value="Material;Materials/Monolith.xml" />
 				<attribute name="Animation States">
 					<variant type="Int" value="0" />
 				</attribute>
