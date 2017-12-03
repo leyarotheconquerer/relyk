@@ -1,5 +1,4 @@
-const int SELECTION_LAYER = 1;
-const int MOVEMENT_LAYER = 2;
+#include "Scripts/Constants.as"
 
 class UnitSelection : ScriptObject
 {
@@ -19,6 +18,7 @@ class UnitSelection : ScriptObject
 
 		SubscribeToEvent("MouseButtonDown", "HandleMouseButtonDown");
 		SubscribeToEvent("PostRenderUpdate", "HandlePostRenderUpdate");
+		SubscribeToEvent("UnitUpgrade", "HandleUnitUpgrade");
 	}
 
 	void Save(Serializer& serializer)
@@ -86,6 +86,27 @@ class UnitSelection : ScriptObject
 			position_ = result.position;
 			normal_ = result.normal;
 			Move(position_);
+		}
+	}
+
+	void HandleUnitUpgrade(StringHash type, VariantMap& data)
+	{
+		String unitType = data["Type"].ToString();
+		int count = 0;
+		Array<Node@> nodes;
+		for(uint i = 0; i < selected_.length; i++)
+		{
+			if (selected_[i].HasTag(unitType))
+			{
+				nodes.Push(selected_[i]);
+				selected_[i].Remove();
+				VariantMap killData;
+				killData["Team"] = "player";
+				killData["Type"] = unitType;
+				killData["Node"] = selected_[i];
+				killData["Score"] = 0;
+				SendEvent("UnitDied", killData);
+			}
 		}
 	}
 

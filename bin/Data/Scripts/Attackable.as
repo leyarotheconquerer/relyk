@@ -1,9 +1,10 @@
-const int TYPE_MULTIPLIER = 2;
+#include "Scripts/Constants.as"
 
 class Attackable : ScriptObject
 {
 	int healthPoints_;
 	int maxHealthPoints_;
+	int scorePoints_;
 	String team_;
 	String type_;
 
@@ -11,6 +12,7 @@ class Attackable : ScriptObject
 	{
 		maxHealthPoints_ = 100;
 		healthPoints_ = maxHealthPoints_;
+		scorePoints_ = 1;
 		type_ = "cuboid";
 		team_ = "player";
 	}
@@ -28,6 +30,7 @@ class Attackable : ScriptObject
 	{
 		serializer.WriteInt(healthPoints_);
 		serializer.WriteInt(maxHealthPoints_);
+		serializer.WriteInt(scorePoints_);
 		serializer.WriteString(type_);
 		serializer.WriteString(team_);
 	}
@@ -36,6 +39,7 @@ class Attackable : ScriptObject
 	{
 		healthPoints_ = deserializer.ReadInt();
 		maxHealthPoints_ = deserializer.ReadInt();
+		scorePoints_ = deserializer.ReadInt();
 		type_ = deserializer.ReadString();
 		team_ = deserializer.ReadString();
 	}
@@ -67,6 +71,7 @@ class Attackable : ScriptObject
 			deathData["Team"] = team_;
 			deathData["Type"] = type_;
 			deathData["Node"] = node;
+			deathData["Score"] = scorePoints_;
 			SendEvent("UnitDied", deathData);
 			node.Remove();
 		}

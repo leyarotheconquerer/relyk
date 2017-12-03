@@ -1,4 +1,4 @@
-const int ATTACKABLE_LAYER = 4;
+#include "Scripts/Constants.as"
 
 class Attacker : ScriptObject
 {
@@ -30,6 +30,8 @@ class Attacker : ScriptObject
 
 	void DelayedStart()
 	{
+		node.AddTag(team_);
+		node.AddTag(type_);
 		timer_.Reset();
 	}
 

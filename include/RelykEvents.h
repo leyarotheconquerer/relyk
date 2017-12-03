@@ -41,9 +41,23 @@ namespace Relyk
 		URHO3D_PARAM(P_TEAM, Team);             // Urho3D::String
 		URHO3D_PARAM(P_TYPE, Type);             // Urho3D::String
 		URHO3D_PARAM(P_NODE, Node);             // Urho3D::Node*
+		URHO3D_PARAM(P_SCORE, Score);           // int
 	}
 
 	URHO3D_EVENT(E_UNITSPAWN, UnitSpawn)
+	{
+		URHO3D_PARAM(P_TEAM, Team);             // Urho3D::String
+		URHO3D_PARAM(P_TYPE, Type);             // Urho3D::String
+	}
+
+	URHO3D_EVENT(E_UNITPURCHASE, UnitPurchase)
+	{
+		URHO3D_PARAM(P_TEAM, Team);             // Urho3D::String
+		URHO3D_PARAM(P_TYPE, Type);             // Urho3D::String
+		URHO3D_PARAM(P_TARGET, Target);         // Urho3D::Vector3
+	}
+
+	URHO3D_EVENT(E_UNITUPGRADE, UnitUpgrade)
 	{
 		URHO3D_PARAM(P_TEAM, Team);             // Urho3D::String
 		URHO3D_PARAM(P_TYPE, Type);             // Urho3D::String
@@ -54,6 +68,13 @@ namespace Relyk
 		URHO3D_PARAM(P_TEAM, Team);             // Urho3D::String
 		URHO3D_PARAM(P_TYPE, Type);             // Urho3D::String
 		URHO3D_PARAM(P_DIVIDER, Divider);       // int
+	}
+
+	URHO3D_EVENT(E_PLAYERPOINTS, PlayerPoints)
+	{
+		URHO3D_PARAM(P_TOTAL, Total);           // int
+		URHO3D_PARAM(P_NEW, New);               // int
+		URHO3D_PARAM(P_SPENT, Spent);           // int
 	}
 }
 

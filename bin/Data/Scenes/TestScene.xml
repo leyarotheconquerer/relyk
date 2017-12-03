@@ -7,8 +7,8 @@
 	<attribute name="Elapsed Time" value="0" />
 	<attribute name="Next Replicated Node ID" value="11" />
 	<attribute name="Next Replicated Component ID" value="17" />
-	<attribute name="Next Local Node ID" value="16777253" />
-	<attribute name="Next Local Component ID" value="16777372" />
+	<attribute name="Next Local Node ID" value="16777255" />
+	<attribute name="Next Local Component ID" value="16777381" />
 	<attribute name="Variables" />
 	<attribute name="Variable Names" value="Min;Max" />
 	<component type="Octree" id="1" />
@@ -206,6 +206,17 @@
 				<variant hash="886341749" type="Int" value="0" />
 			</attribute>
 		</component>
+		<component type="ScriptInstance" id="16777372">
+			<attribute name="Delayed Method Calls" value="0" />
+			<attribute name="Script File" value="ScriptFile;Scripts/PlayerPoints.as" />
+			<attribute name="Class Name" value="PlayerPoints" />
+			<attribute name="Script Data" value="79 98 106 101 99 116 115 47 67 117 98 111 105 100 46 120 109 108 0 79 98 106 101 99 116 115 47 83 112 104 101 114 111 105 100 46 120 109 108 0 79 98 106 101 99 116 115 47 80 121 114 97 109 111 105 100 46 120 109 108 0" />
+			<attribute name="points_" value="0" />
+			<attribute name="prices_" />
+			<attribute name="cuboid_" value="Objects/Cuboid.xml" />
+			<attribute name="spheroid_" value="Objects/Spheroid.xml" />
+			<attribute name="pyramoid_" value="Objects/Pyramoid.xml" />
+		</component>
 	</node>
 	<node id="16777231">
 		<attribute name="Is Enabled" value="true" />
@@ -232,9 +243,10 @@
 			<attribute name="Delayed Method Calls" value="0" />
 			<attribute name="Script File" value="ScriptFile;Scripts/Attackable.as" />
 			<attribute name="Class Name" value="Attackable" />
-			<attribute name="Script Data" value="232 3 0 0 232 3 0 0 109 111 110 111 108 105 116 104 0 0" />
+			<attribute name="Script Data" value="232 3 0 0 232 3 0 0 100 0 0 0 109 111 110 111 108 105 116 104 0 0" />
 			<attribute name="healthPoints_" value="1000" />
 			<attribute name="maxHealthPoints_" value="1000" />
+			<attribute name="scorePoints_" value="100" />
 			<attribute name="team_" value="" />
 			<attribute name="type_" value="monolith" />
 		</component>
