@@ -38,10 +38,10 @@ class Hud : ScriptObject
 		CuboidBar = cuboidSection.GetChild("Count", true);
 		CuboidText = cuboidSection.GetChild("CountText", true);
 		BarHeight = cuboidSection.GetChild("Total", true).height;
-		UIElement@ spheroidSection = powerWindow.GetChild("Cuboid", true);
+		UIElement@ spheroidSection = powerWindow.GetChild("Spheroid", true);
 		SpheroidBar = spheroidSection.GetChild("Count", true);
 		SpheroidText = spheroidSection.GetChild("CountText", true);
-		UIElement@ pyramoidSection = powerWindow.GetChild("Cuboid", true);
+		UIElement@ pyramoidSection = powerWindow.GetChild("Pyramoid", true);
 		PyramoidBar = pyramoidSection.GetChild("Count", true);
 		PyramoidText = pyramoidSection.GetChild("CountText", true);
 

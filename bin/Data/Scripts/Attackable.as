@@ -7,6 +7,8 @@ class Attackable : ScriptObject
 	int scorePoints_;
 	String team_;
 	String type_;
+	Billboard@ health_;
+	int healthSize_;
 
 	Attackable()
 	{
@@ -24,6 +26,10 @@ class Attackable : ScriptObject
 
 	void DelayedStart()
 	{
+		Node@ healthNode = node.GetChild("Health", true);
+		BillboardSet@ set = healthNode.GetComponent("BillboardSet");
+		health_ = set.billboards[0];
+		healthSize_ = health_.size.x;
 		Node@ modelNode = node.GetChild("Model", true);
 		SubscribeToEvent(modelNode, "AnimationTrigger", "HandleDeathAnimationTrigger");
 	}
@@ -65,6 +71,7 @@ class Attackable : ScriptObject
 		log.Debug(node.name + " (" + node.id + ") HP " + healthPoints_ + " = " + (healthPoints_ + damage) + " - " + damage);
 		healthPoints_ = healthPoints_ < 0 ? 0 : healthPoints_;
 
+		health_.size.x = int(healthSize_ * (float(healthPoints_) / maxHealthPoints_));
 		VariantMap damageData;
 		damageData["Damage"] = damage;
 		damageData["TypeMatch"] = typeMatch;
@@ -74,6 +81,7 @@ class Attackable : ScriptObject
 
 		if (healthPoints_ <= 0)
 		{
+			health_.enabled = false;
 			log.Info(node.name + " (" + node.id + ") is dead");
 			DisableNode(node);
 			VariantMap deathAnimData;

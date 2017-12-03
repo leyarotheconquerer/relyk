@@ -36,7 +36,7 @@
 		<attribute name="height_" value="2" />
 		<attribute name="maxSpeed_" value="3" />
 		<attribute name="maxAccel_" value="5" />
-		<attribute name="crowdAgent_" value="16777232" />
+		<attribute name="crowdAgent_" value="0" />
 	</component>
 	<component type="CrowdAgent" id="16777397">
 		<attribute name="Target Position" value="2.6901 0.500009 -7.31837" />
@@ -220,5 +220,28 @@
 		<attribute name="Rotation" value="1 0 0 0" />
 		<attribute name="Scale" value="1 1 1" />
 		<attribute name="Variables" />
+	</node>
+	<node id="16777324">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="Health" />
+		<attribute name="Tags" />
+		<attribute name="Position" value="0 6 0" />
+		<attribute name="Rotation" value="1 0 0 0" />
+		<attribute name="Scale" value="1 1 1" />
+		<attribute name="Variables" />
+		<component type="BillboardSet" id="16777472">
+			<attribute name="Material" value="Material;Materials/Health.xml" />
+			<attribute name="Fixed Screen Size" value="true" />
+			<attribute name="Billboards">
+				<variant type="Int" value="1" />
+				<variant type="Vector3" value="0 0 0" />
+				<variant type="Vector2" value="50 10" />
+				<variant type="Vector4" value="0 0 1 1" />
+				<variant type="Color" value="1 1 1 1" />
+				<variant type="Float" value="0" />
+				<variant type="Vector3" value="0 1 0" />
+				<variant type="Bool" value="true" />
+			</attribute>
+		</component>
 	</node>
 </node>

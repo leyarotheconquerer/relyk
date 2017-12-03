@@ -53,4 +53,27 @@
 		<attribute name="Scale" value="1 1 1" />
 		<attribute name="Variables" />
 	</node>
+	<node id="16777369">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="Health" />
+		<attribute name="Tags" />
+		<attribute name="Position" value="0 10.7648 0" />
+		<attribute name="Rotation" value="1 0 0 0" />
+		<attribute name="Scale" value="1 1 1" />
+		<attribute name="Variables" />
+		<component type="BillboardSet" id="16777506">
+			<attribute name="Material" value="Material;Materials/Health.xml" />
+			<attribute name="Fixed Screen Size" value="true" />
+			<attribute name="Billboards">
+				<variant type="Int" value="1" />
+				<variant type="Vector3" value="0 0 0" />
+				<variant type="Vector2" value="100 10" />
+				<variant type="Vector4" value="0 0 1 1" />
+				<variant type="Color" value="1 1 1 1" />
+				<variant type="Float" value="0" />
+				<variant type="Vector3" value="0 1 0" />
+				<variant type="Bool" value="true" />
+			</attribute>
+		</component>
+	</node>
 </node>
