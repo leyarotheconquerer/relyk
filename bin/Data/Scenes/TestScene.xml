@@ -7,8 +7,8 @@
 	<attribute name="Elapsed Time" value="0" />
 	<attribute name="Next Replicated Node ID" value="11" />
 	<attribute name="Next Replicated Component ID" value="17" />
-	<attribute name="Next Local Node ID" value="16777309" />
-	<attribute name="Next Local Component ID" value="16777456" />
+	<attribute name="Next Local Node ID" value="16777323" />
+	<attribute name="Next Local Component ID" value="16777467" />
 	<attribute name="Variables" />
 	<attribute name="Variable Names" value="Min;Max" />
 	<component type="Octree" id="1" />
@@ -97,8 +97,8 @@
 			<attribute name="Class Name" value="UnitSelection" />
 			<attribute name="Script Data" value="232 3 0 0" />
 			<attribute name="maxRayDistance_" value="1000" />
-			<attribute name="position_" value="0 0 0" />
-			<attribute name="normal_" value="0 0 0" />
+			<attribute name="position_" value="-5.3653 0.500029 -4.62538" />
+			<attribute name="normal_" value="2.86402e-007 1 -2.86402e-007" />
 		</component>
 		<component type="ScriptInstance" id="16777236">
 			<attribute name="Delayed Method Calls" value="0" />
@@ -143,6 +143,16 @@
 			<attribute name="cuboid_" value="Objects/Cuboid.xml" />
 			<attribute name="spheroid_" value="Objects/Spheroid.xml" />
 			<attribute name="pyramoid_" value="Objects/Pyramoid.xml" />
+		</component>
+		<component type="ScriptInstance" id="16777456">
+			<attribute name="Delayed Method Calls" value="0" />
+			<attribute name="Script File" value="ScriptFile;Scripts/Hud.as" />
+			<attribute name="Class Name" value="Hud" />
+			<attribute name="Script Data" value="85 73 47 71 97 109 101 72 117 100 46 120 109 108 0 85 73 47 82 101 108 121 107 83 116 121 108 101 46 120 109 108 0" />
+			<attribute name="hud_" value="UI/GameHud.xml" />
+			<attribute name="style_" value="UI/RelykStyle.xml" />
+			<attribute name="PlayerSpawn" value="0" />
+			<attribute name="BarHeight" value="0" />
 		</component>
 	</node>
 	<node id="16777231">
@@ -477,5 +487,14 @@
 			<attribute name="Scale" value="1 1 1" />
 			<attribute name="Variables" />
 		</node>
+	</node>
+	<node id="16777322">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="PlayerSpawn" />
+		<attribute name="Tags" />
+		<attribute name="Position" value="-6.55379 0.518649 -10.2537" />
+		<attribute name="Rotation" value="1 0 0 0" />
+		<attribute name="Scale" value="1 1 1" />
+		<attribute name="Variables" />
 	</node>
 </scene>

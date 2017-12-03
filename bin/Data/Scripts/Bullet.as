@@ -40,7 +40,6 @@ class Bullet : ScriptObject
 					targetCenter.worldPosition,
 					elapsed_ / delay_
 				);
-				log.Debug("Moving from " + node.worldPosition.ToString() + " to " + targetCenter.worldPosition.ToString());
 				if ((targetCenter.worldPosition - node.worldPosition).lengthSquared < 0.1)
 				{
 					log.Debug("Arrived at target, sending event");

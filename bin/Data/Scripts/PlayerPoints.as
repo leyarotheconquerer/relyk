@@ -61,7 +61,7 @@ class PlayerPoints : ScriptObject
 		scoreData["Total"] = points_;
 		scoreData["New"] = new;
 		scoreData["Spent"] = spent;
-		SendEvent("PlayerScore", scoreData);
+		SendEvent("PlayerPoints", scoreData);
 	}
 
 	void HandlePlayerPurchase(StringHash type, VariantMap& data)
@@ -97,6 +97,12 @@ class PlayerPoints : ScriptObject
 			spawnData["Team"] = "player";
 			spawnData["Type"] = unitType;
 			SendEvent("UnitSpawn", spawnData);
+
+			VariantMap scoreData;
+			scoreData["Total"] = points_;
+			scoreData["New"] = 0;
+			scoreData["Spent"] = price;
+			SendEvent("PlayerPoints", scoreData);
 		}
 		else
 		{

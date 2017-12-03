@@ -76,3 +76,5 @@ power, defending it from the horde of broken robots that seek to tear it down.
 This project is usable under the MIT license ([see here](License.md)).
 
 It heavily uses the Urho3D library/engine which is licensed under the MIT license and may be found [here](https://urho3d.github.io/).
+
+The [Bedstead](https://fontlibrary.org/en/font/bedstead) font is used from the Public Domain.

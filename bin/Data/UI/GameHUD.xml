@@ -1,0 +1,473 @@
+<?xml version="1.0"?>
+<element>
+	<attribute name="Name" value="GameHUD" />
+	<attribute name="Size" value="1920 1017" />
+	<attribute name="Min Size" value="500 500" />
+	<attribute name="Max Anchor" value="1 1" />
+	<attribute name="Pivot" value="0 0" />
+	<attribute name="Enable Anchor" value="true" />
+	<element type="Window" style="Panel">
+		<attribute name="Name" value="ScoreWindow" />
+		<attribute name="Position" value="20 20" />
+		<attribute name="Size" value="180 51" />
+		<attribute name="Pivot" value="0 0" />
+		<attribute name="Layout Border" value="20 10 20 10" />
+		<attribute name="Image Rect" value="128 0 192 64" />
+		<attribute name="Border" value="20 20 20 20" />
+		<element>
+			<attribute name="Name" value="ScoreRow" />
+			<attribute name="Pivot" value="0 0" />
+			<attribute name="Layout Mode" value="Horizontal" />
+			<element type="Text">
+				<attribute name="Name" value="ScoreLabel" />
+				<attribute name="Pivot" value="0 0" />
+				<attribute name="Top Left Color" value="0.85 0.85 0.85 1" />
+				<attribute name="Top Right Color" value="0.85 0.85 0.85 1" />
+				<attribute name="Bottom Left Color" value="0.85 0.85 0.85 1" />
+				<attribute name="Bottom Right Color" value="0.85 0.85 0.85 1" />
+				<attribute name="Font Size" value="20" />
+				<attribute name="Text" value="Score:" />
+			</element>
+			<element type="Text">
+				<attribute name="Name" value="ScoreText" />
+				<attribute name="Pivot" value="0 0" />
+				<attribute name="Top Left Color" value="0.85 0.85 0.85 1" />
+				<attribute name="Top Right Color" value="0.85 0.85 0.85 1" />
+				<attribute name="Bottom Left Color" value="0.85 0.85 0.85 1" />
+				<attribute name="Bottom Right Color" value="0.85 0.85 0.85 1" />
+				<attribute name="Font Size" value="20" />
+				<attribute name="Text" value="0" />
+				<attribute name="Text Alignment" value="Right" />
+			</element>
+		</element>
+	</element>
+	<element type="Window">
+		<attribute name="Name" value="PowerWindow" />
+		<attribute name="Position" value="20 -20" />
+		<attribute name="Size" value="300 200" />
+		<attribute name="Min Anchor" value="0 1" />
+		<attribute name="Max Anchor" value="0 1" />
+		<attribute name="Pivot" value="0 1" />
+		<attribute name="Layout Mode" value="Horizontal" />
+		<attribute name="Layout Border" value="20 20 20 20" />
+		<attribute name="Image Rect" value="128 0 192 64" />
+		<attribute name="Border" value="20 20 20 20" />
+		<element>
+			<attribute name="Name" value="Cuboid" />
+			<attribute name="Pivot" value="0 0" />
+			<element type="Window">
+				<attribute name="Name" value="Total" />
+				<attribute name="Position" value="0 10" />
+				<attribute name="Size" value="40 120" />
+				<attribute name="Min Anchor" value="0.5 0" />
+				<attribute name="Max Anchor" value="0.5 0" />
+				<attribute name="Pivot" value="0.5 0" />
+				<attribute name="Image Rect" value="0 32 32 64" />
+				<element type="Window">
+					<attribute name="Name" value="Count" />
+					<attribute name="Size" value="40 60" />
+					<attribute name="Min Anchor" value="0 1" />
+					<attribute name="Max Anchor" value="0 1" />
+					<attribute name="Pivot" value="0 1" />
+					<attribute name="Image Rect" value="32 0 64 32" />
+				</element>
+				<element type="Text">
+					<attribute name="Name" value="CountText" />
+					<attribute name="Min Anchor" value="0.5 0.5" />
+					<attribute name="Max Anchor" value="0.5 0.5" />
+					<attribute name="Pivot" value="0.5 0.5" />
+					<attribute name="Priority" value="1" />
+					<attribute name="Top Left Color" value="0.85 0.85 0.85 1" />
+					<attribute name="Top Right Color" value="0.85 0.85 0.85 1" />
+					<attribute name="Bottom Left Color" value="0.85 0.85 0.85 1" />
+					<attribute name="Bottom Right Color" value="0.85 0.85 0.85 1" />
+					<attribute name="Font Size" value="20" />
+					<attribute name="Text" value="2" />
+					<attribute name="Text Alignment" value="Center" />
+				</element>
+			</element>
+			<element type="Text">
+				<attribute name="Name" value="Label" />
+				<attribute name="Min Anchor" value="0.5 1" />
+				<attribute name="Max Anchor" value="0.5 1" />
+				<attribute name="Pivot" value="0.5 1" />
+				<attribute name="Color" value="0.1 0.1 0.1 1" />
+				<attribute name="Top Left Color" value="0.1 0.1 0.1 1" />
+				<attribute name="Top Right Color" value="0.1 0.1 0.1 1" />
+				<attribute name="Bottom Left Color" value="0.1 0.1 0.1 1" />
+				<attribute name="Bottom Right Color" value="0.1 0.1 0.1 1" />
+				<attribute name="Text" value="Cuboid" />
+			</element>
+		</element>
+		<element>
+			<attribute name="Name" value="Spheroid" />
+			<attribute name="Pivot" value="0 0" />
+			<element type="Window">
+				<attribute name="Name" value="Total" />
+				<attribute name="Position" value="0 10" />
+				<attribute name="Size" value="40 120" />
+				<attribute name="Min Anchor" value="0.5 0" />
+				<attribute name="Max Anchor" value="0.5 0" />
+				<attribute name="Pivot" value="0.5 0" />
+				<attribute name="Image Rect" value="0 32 32 64" />
+				<element type="Window">
+					<attribute name="Name" value="Count" />
+					<attribute name="Size" value="40 60" />
+					<attribute name="Min Anchor" value="0 1" />
+					<attribute name="Max Anchor" value="0 1" />
+					<attribute name="Pivot" value="0 1" />
+					<attribute name="Image Rect" value="32 0 64 32" />
+				</element>
+				<element type="Text">
+					<attribute name="Name" value="CountText" />
+					<attribute name="Min Anchor" value="0.5 0.5" />
+					<attribute name="Max Anchor" value="0.5 0.5" />
+					<attribute name="Pivot" value="0.5 0.5" />
+					<attribute name="Priority" value="1" />
+					<attribute name="Top Left Color" value="0.85 0.85 0.85 1" />
+					<attribute name="Top Right Color" value="0.85 0.85 0.85 1" />
+					<attribute name="Bottom Left Color" value="0.85 0.85 0.85 1" />
+					<attribute name="Bottom Right Color" value="0.85 0.85 0.85 1" />
+					<attribute name="Font Size" value="20" />
+					<attribute name="Text" value="2" />
+					<attribute name="Text Alignment" value="Center" />
+				</element>
+			</element>
+			<element type="Text">
+				<attribute name="Name" value="Label" />
+				<attribute name="Min Anchor" value="0.5 1" />
+				<attribute name="Max Anchor" value="0.5 1" />
+				<attribute name="Pivot" value="0.5 1" />
+				<attribute name="Color" value="0.1 0.1 0.1 1" />
+				<attribute name="Top Left Color" value="0.1 0.1 0.1 1" />
+				<attribute name="Top Right Color" value="0.1 0.1 0.1 1" />
+				<attribute name="Bottom Left Color" value="0.1 0.1 0.1 1" />
+				<attribute name="Bottom Right Color" value="0.1 0.1 0.1 1" />
+				<attribute name="Text" value="Spheroid" />
+			</element>
+		</element>
+		<element>
+			<attribute name="Name" value="Pyramoid" />
+			<attribute name="Pivot" value="0 0" />
+			<element type="Window">
+				<attribute name="Name" value="Total" />
+				<attribute name="Position" value="0 10" />
+				<attribute name="Size" value="40 120" />
+				<attribute name="Min Anchor" value="0.5 0" />
+				<attribute name="Max Anchor" value="0.5 0" />
+				<attribute name="Pivot" value="0.5 0" />
+				<attribute name="Image Rect" value="0 32 32 64" />
+				<element type="Window">
+					<attribute name="Name" value="Count" />
+					<attribute name="Size" value="40 60" />
+					<attribute name="Min Anchor" value="0 1" />
+					<attribute name="Max Anchor" value="0 1" />
+					<attribute name="Pivot" value="0 1" />
+					<attribute name="Image Rect" value="32 0 64 32" />
+				</element>
+				<element type="Text">
+					<attribute name="Name" value="CountText" />
+					<attribute name="Min Anchor" value="0.5 0.5" />
+					<attribute name="Max Anchor" value="0.5 0.5" />
+					<attribute name="Pivot" value="0.5 0.5" />
+					<attribute name="Priority" value="1" />
+					<attribute name="Top Left Color" value="0.85 0.85 0.85 1" />
+					<attribute name="Top Right Color" value="0.85 0.85 0.85 1" />
+					<attribute name="Bottom Left Color" value="0.85 0.85 0.85 1" />
+					<attribute name="Bottom Right Color" value="0.85 0.85 0.85 1" />
+					<attribute name="Font Size" value="20" />
+					<attribute name="Text" value="2" />
+					<attribute name="Text Alignment" value="Center" />
+				</element>
+			</element>
+			<element type="Text">
+				<attribute name="Name" value="Label" />
+				<attribute name="Min Anchor" value="0.5 1" />
+				<attribute name="Max Anchor" value="0.5 1" />
+				<attribute name="Pivot" value="0.5 1" />
+				<attribute name="Color" value="0.1 0.1 0.1 1" />
+				<attribute name="Top Left Color" value="0.1 0.1 0.1 1" />
+				<attribute name="Top Right Color" value="0.1 0.1 0.1 1" />
+				<attribute name="Bottom Left Color" value="0.1 0.1 0.1 1" />
+				<attribute name="Bottom Right Color" value="0.1 0.1 0.1 1" />
+				<attribute name="Text" value="Pyramoid" />
+			</element>
+		</element>
+	</element>
+	<element type="Window">
+		<attribute name="Name" value="PurchaseWindow" />
+		<attribute name="Position" value="-20 20" />
+		<attribute name="Size" value="200 600" />
+		<attribute name="Min Anchor" value="1 0" />
+		<attribute name="Max Anchor" value="1 0" />
+		<attribute name="Pivot" value="1 0" />
+		<attribute name="Layout Mode" value="Vertical" />
+		<attribute name="Layout Border" value="20 20 20 20" />
+		<attribute name="Image Rect" value="128 0 192 64" />
+		<attribute name="Border" value="20 20 20 20" />
+		<element type="Text">
+			<attribute name="Name" value="Title" />
+			<attribute name="Pivot" value="0 0" />
+			<attribute name="Color" value="0.1 0.1 0.1 1" />
+			<attribute name="Top Left Color" value="0.1 0.1 0.1 1" />
+			<attribute name="Top Right Color" value="0.1 0.1 0.1 1" />
+			<attribute name="Bottom Left Color" value="0.1 0.1 0.1 1" />
+			<attribute name="Bottom Right Color" value="0.1 0.1 0.1 1" />
+			<attribute name="Font Size" value="20" />
+			<attribute name="Text" value="Purchase" />
+		</element>
+		<element>
+			<attribute name="Name" value="Cuboid" />
+			<attribute name="Pivot" value="0 0" />
+			<element type="Button">
+				<attribute name="Name" value="Purchase" />
+				<attribute name="Size" value="160 178" />
+				<attribute name="Max Anchor" value="1 1" />
+				<attribute name="Pivot" value="0 0" />
+				<attribute name="Enable Anchor" value="true" />
+				<element type="Window">
+					<attribute name="Size" value="100 100" />
+					<attribute name="Min Anchor" value="0.5 0" />
+					<attribute name="Max Anchor" value="0.5 0" />
+					<attribute name="Pivot" value="0.5 0" />
+					<attribute name="Texture" value="Texture2D;Textures/CuboidPreview.png" />
+					<attribute name="Image Rect" value="0 0 512 512" />
+					<attribute name="Border" value="0 0 0 0" />
+				</element>
+				<element>
+					<attribute name="Name" value="Description" />
+					<attribute name="Size" value="165 96" />
+					<attribute name="Min Anchor" value="0 1" />
+					<attribute name="Max Anchor" value="0 1" />
+					<attribute name="Pivot" value="0 1" />
+					<attribute name="Layout Mode" value="Vertical" />
+					<attribute name="Layout Border" value="5 5 5 5" />
+					<element type="Text">
+						<attribute name="Name" value="Name" />
+						<attribute name="Pivot" value="0 0" />
+						<attribute name="Color" value="0.1 0.1 0.1 1" />
+						<attribute name="Top Left Color" value="0.1 0.1 0.1 1" />
+						<attribute name="Top Right Color" value="0.1 0.1 0.1 1" />
+						<attribute name="Bottom Left Color" value="0.1 0.1 0.1 1" />
+						<attribute name="Bottom Right Color" value="0.1 0.1 0.1 1" />
+						<attribute name="Font Size" value="16" />
+						<attribute name="Text" value="Cuboid" />
+					</element>
+					<element type="Text">
+						<attribute name="Name" value="Cost" />
+						<attribute name="Pivot" value="0 0" />
+						<attribute name="Color" value="0.1 0.1 0.1 1" />
+						<attribute name="Top Left Color" value="0.1 0.1 0.1 1" />
+						<attribute name="Top Right Color" value="0.1 0.1 0.1 1" />
+						<attribute name="Bottom Left Color" value="0.1 0.1 0.1 1" />
+						<attribute name="Bottom Right Color" value="0.1 0.1 0.1 1" />
+						<attribute name="Font Size" value="12" />
+						<attribute name="Text" value="Cost: 1 Point" />
+					</element>
+					<element type="Text">
+						<attribute name="Name" value="Attack" />
+						<attribute name="Pivot" value="0 0" />
+						<attribute name="Color" value="0.1 0.1 0.1 1" />
+						<attribute name="Top Left Color" value="0.1 0.1 0.1 1" />
+						<attribute name="Top Right Color" value="0.1 0.1 0.1 1" />
+						<attribute name="Bottom Left Color" value="0.1 0.1 0.1 1" />
+						<attribute name="Bottom Right Color" value="0.1 0.1 0.1 1" />
+						<attribute name="Font Size" value="12" />
+						<attribute name="Text" value="Attack: 10" />
+					</element>
+					<element type="Text">
+						<attribute name="Name" value="Health" />
+						<attribute name="Pivot" value="0 0" />
+						<attribute name="Color" value="0.1 0.1 0.1 1" />
+						<attribute name="Top Left Color" value="0.1 0.1 0.1 1" />
+						<attribute name="Top Right Color" value="0.1 0.1 0.1 1" />
+						<attribute name="Bottom Left Color" value="0.1 0.1 0.1 1" />
+						<attribute name="Bottom Right Color" value="0.1 0.1 0.1 1" />
+						<attribute name="Font Size" value="12" />
+						<attribute name="Text" value="Health: 100 HP" />
+					</element>
+					<element type="Text">
+						<attribute name="Name" value="Rate" />
+						<attribute name="Pivot" value="0 0" />
+						<attribute name="Color" value="0.1 0.1 0.1 1" />
+						<attribute name="Top Left Color" value="0.1 0.1 0.1 1" />
+						<attribute name="Top Right Color" value="0.1 0.1 0.1 1" />
+						<attribute name="Bottom Left Color" value="0.1 0.1 0.1 1" />
+						<attribute name="Bottom Right Color" value="0.1 0.1 0.1 1" />
+						<attribute name="Font Size" value="12" />
+						<attribute name="Text" value="Attack/sec: 1" />
+					</element>
+				</element>
+			</element>
+		</element>
+		<element>
+			<attribute name="Name" value="Spheroid" />
+			<attribute name="Pivot" value="0 0" />
+			<element type="Button">
+				<attribute name="Name" value="Purchase" />
+				<attribute name="Size" value="160 177" />
+				<attribute name="Max Anchor" value="1 1" />
+				<attribute name="Pivot" value="0 0" />
+				<attribute name="Enable Anchor" value="true" />
+				<element>
+					<attribute name="Name" value="Description" />
+					<attribute name="Size" value="165 96" />
+					<attribute name="Min Anchor" value="0 1" />
+					<attribute name="Max Anchor" value="0 1" />
+					<attribute name="Pivot" value="0 1" />
+					<attribute name="Layout Mode" value="Vertical" />
+					<attribute name="Layout Border" value="5 5 5 5" />
+					<element type="Text">
+						<attribute name="Name" value="Name" />
+						<attribute name="Pivot" value="0 0" />
+						<attribute name="Color" value="0.1 0.1 0.1 1" />
+						<attribute name="Top Left Color" value="0.1 0.1 0.1 1" />
+						<attribute name="Top Right Color" value="0.1 0.1 0.1 1" />
+						<attribute name="Bottom Left Color" value="0.1 0.1 0.1 1" />
+						<attribute name="Bottom Right Color" value="0.1 0.1 0.1 1" />
+						<attribute name="Font Size" value="16" />
+						<attribute name="Text" value="Spheroid" />
+					</element>
+					<element type="Text">
+						<attribute name="Name" value="Cost" />
+						<attribute name="Pivot" value="0 0" />
+						<attribute name="Color" value="0.1 0.1 0.1 1" />
+						<attribute name="Top Left Color" value="0.1 0.1 0.1 1" />
+						<attribute name="Top Right Color" value="0.1 0.1 0.1 1" />
+						<attribute name="Bottom Left Color" value="0.1 0.1 0.1 1" />
+						<attribute name="Bottom Right Color" value="0.1 0.1 0.1 1" />
+						<attribute name="Font Size" value="12" />
+						<attribute name="Text" value="Cost: 2 Point" />
+					</element>
+					<element type="Text">
+						<attribute name="Name" value="Attack" />
+						<attribute name="Pivot" value="0 0" />
+						<attribute name="Color" value="0.1 0.1 0.1 1" />
+						<attribute name="Top Left Color" value="0.1 0.1 0.1 1" />
+						<attribute name="Top Right Color" value="0.1 0.1 0.1 1" />
+						<attribute name="Bottom Left Color" value="0.1 0.1 0.1 1" />
+						<attribute name="Bottom Right Color" value="0.1 0.1 0.1 1" />
+						<attribute name="Font Size" value="12" />
+						<attribute name="Text" value="Attack: 10" />
+					</element>
+					<element type="Text">
+						<attribute name="Name" value="Health" />
+						<attribute name="Pivot" value="0 0" />
+						<attribute name="Color" value="0.1 0.1 0.1 1" />
+						<attribute name="Top Left Color" value="0.1 0.1 0.1 1" />
+						<attribute name="Top Right Color" value="0.1 0.1 0.1 1" />
+						<attribute name="Bottom Left Color" value="0.1 0.1 0.1 1" />
+						<attribute name="Bottom Right Color" value="0.1 0.1 0.1 1" />
+						<attribute name="Font Size" value="12" />
+						<attribute name="Text" value="Health: 200 HP" />
+					</element>
+					<element type="Text">
+						<attribute name="Name" value="Rate" />
+						<attribute name="Pivot" value="0 0" />
+						<attribute name="Color" value="0.1 0.1 0.1 1" />
+						<attribute name="Top Left Color" value="0.1 0.1 0.1 1" />
+						<attribute name="Top Right Color" value="0.1 0.1 0.1 1" />
+						<attribute name="Bottom Left Color" value="0.1 0.1 0.1 1" />
+						<attribute name="Bottom Right Color" value="0.1 0.1 0.1 1" />
+						<attribute name="Font Size" value="12" />
+						<attribute name="Text" value="Attack/sec: 2" />
+					</element>
+				</element>
+				<element type="Window">
+					<attribute name="Size" value="100 100" />
+					<attribute name="Min Anchor" value="0.5 0" />
+					<attribute name="Max Anchor" value="0.5 0" />
+					<attribute name="Pivot" value="0.5 0" />
+					<attribute name="Priority" value="1" />
+					<attribute name="Texture" value="Texture2D;Textures/CuboidPreview.png" />
+					<attribute name="Image Rect" value="0 0 512 512" />
+					<attribute name="Border" value="0 0 0 0" />
+				</element>
+			</element>
+		</element>
+		<element>
+			<attribute name="Name" value="Pyramoid" />
+			<attribute name="Pivot" value="0 0" />
+			<element type="Button">
+				<attribute name="Name" value="Purchase" />
+				<attribute name="Size" value="160 178" />
+				<attribute name="Max Anchor" value="1 1" />
+				<attribute name="Pivot" value="0 0" />
+				<attribute name="Enable Anchor" value="true" />
+				<element type="Window">
+					<attribute name="Size" value="100 100" />
+					<attribute name="Min Anchor" value="0.5 0" />
+					<attribute name="Max Anchor" value="0.5 0" />
+					<attribute name="Pivot" value="0.5 0" />
+					<attribute name="Texture" value="Texture2D;Textures/CuboidPreview.png" />
+					<attribute name="Image Rect" value="0 0 512 512" />
+					<attribute name="Border" value="0 0 0 0" />
+				</element>
+				<element>
+					<attribute name="Name" value="Description" />
+					<attribute name="Size" value="176 96" />
+					<attribute name="Min Anchor" value="0 1" />
+					<attribute name="Max Anchor" value="0 1" />
+					<attribute name="Pivot" value="0 1" />
+					<attribute name="Layout Mode" value="Vertical" />
+					<attribute name="Layout Border" value="5 5 5 5" />
+					<element type="Text">
+						<attribute name="Name" value="Name" />
+						<attribute name="Pivot" value="0 0" />
+						<attribute name="Color" value="0.1 0.1 0.1 1" />
+						<attribute name="Top Left Color" value="0.1 0.1 0.1 1" />
+						<attribute name="Top Right Color" value="0.1 0.1 0.1 1" />
+						<attribute name="Bottom Left Color" value="0.1 0.1 0.1 1" />
+						<attribute name="Bottom Right Color" value="0.1 0.1 0.1 1" />
+						<attribute name="Font Size" value="16" />
+						<attribute name="Text" value="Pyramoid" />
+					</element>
+					<element type="Text">
+						<attribute name="Name" value="Cost" />
+						<attribute name="Pivot" value="0 0" />
+						<attribute name="Color" value="0.1 0.1 0.1 1" />
+						<attribute name="Top Left Color" value="0.1 0.1 0.1 1" />
+						<attribute name="Top Right Color" value="0.1 0.1 0.1 1" />
+						<attribute name="Bottom Left Color" value="0.1 0.1 0.1 1" />
+						<attribute name="Bottom Right Color" value="0.1 0.1 0.1 1" />
+						<attribute name="Font Size" value="12" />
+						<attribute name="Text" value="Cost: 3 Point" />
+					</element>
+					<element type="Text">
+						<attribute name="Name" value="Attack" />
+						<attribute name="Pivot" value="0 0" />
+						<attribute name="Color" value="0.1 0.1 0.1 1" />
+						<attribute name="Top Left Color" value="0.1 0.1 0.1 1" />
+						<attribute name="Top Right Color" value="0.1 0.1 0.1 1" />
+						<attribute name="Bottom Left Color" value="0.1 0.1 0.1 1" />
+						<attribute name="Bottom Right Color" value="0.1 0.1 0.1 1" />
+						<attribute name="Font Size" value="12" />
+						<attribute name="Text" value="Attack: 20" />
+					</element>
+					<element type="Text">
+						<attribute name="Name" value="Health" />
+						<attribute name="Pivot" value="0 0" />
+						<attribute name="Color" value="0.1 0.1 0.1 1" />
+						<attribute name="Top Left Color" value="0.1 0.1 0.1 1" />
+						<attribute name="Top Right Color" value="0.1 0.1 0.1 1" />
+						<attribute name="Bottom Left Color" value="0.1 0.1 0.1 1" />
+						<attribute name="Bottom Right Color" value="0.1 0.1 0.1 1" />
+						<attribute name="Font Size" value="12" />
+						<attribute name="Text" value="Health: 200 HP" />
+					</element>
+					<element type="Text">
+						<attribute name="Name" value="Rate" />
+						<attribute name="Pivot" value="0 0" />
+						<attribute name="Color" value="0.1 0.1 0.1 1" />
+						<attribute name="Top Left Color" value="0.1 0.1 0.1 1" />
+						<attribute name="Top Right Color" value="0.1 0.1 0.1 1" />
+						<attribute name="Bottom Left Color" value="0.1 0.1 0.1 1" />
+						<attribute name="Bottom Right Color" value="0.1 0.1 0.1 1" />
+						<attribute name="Font Size" value="12" />
+						<attribute name="Text" value="Attack/sec: 1" />
+					</element>
+				</element>
+			</element>
+		</element>
+	</element>
+</element>
