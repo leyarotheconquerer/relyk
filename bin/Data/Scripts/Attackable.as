@@ -101,7 +101,10 @@ class Attackable : ScriptObject
 			deathData["Node"] = node;
 			deathData["Score"] = scorePoints_;
 			SendEvent("UnitDied", deathData);
-			node.Remove();
+			if (node.GetScriptObject("GameOver") is null)
+			{
+				node.Remove();
+			}
 		}
 	}
 
@@ -113,8 +116,11 @@ class Attackable : ScriptObject
 			if (components[i].typeName == "ScriptInstance")
 			{
 				ScriptInstance@ instance = cast<ScriptInstance>(components[i]);
-				if (not instance.IsA("Attackable") && not instance.IsA("Animated"))
-				{
+				if (
+					not instance.IsA("Attackable") &&
+					not instance.IsA("Animated") &&
+					not instance.IsA("GameOver")
+				) {
 					instance.Remove();
 					components[i].Remove();
 				}

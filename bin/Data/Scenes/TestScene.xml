@@ -8,7 +8,7 @@
 	<attribute name="Next Replicated Node ID" value="11" />
 	<attribute name="Next Replicated Component ID" value="17" />
 	<attribute name="Next Local Node ID" value="16777384" />
-	<attribute name="Next Local Component ID" value="16777519" />
+	<attribute name="Next Local Component ID" value="16777523" />
 	<attribute name="Variables" />
 	<attribute name="Variable Names" value="Min;Max" />
 	<component type="Octree" id="1" />
@@ -151,8 +151,8 @@
 			<attribute name="Class Name" value="UnitSelection" />
 			<attribute name="Script Data" value="232 3 0 0" />
 			<attribute name="maxRayDistance_" value="1000" />
-			<attribute name="position_" value="0 0 0" />
-			<attribute name="normal_" value="0 0 0" />
+			<attribute name="position_" value="-28.0573 0.500002 17.0626" />
+			<attribute name="normal_" value="0 1 0" />
 		</component>
 	</node>
 	<node id="16777231">
@@ -180,13 +180,32 @@
 			<attribute name="Delayed Method Calls" value="0" />
 			<attribute name="Script File" value="ScriptFile;Scripts/Attackable.as" />
 			<attribute name="Class Name" value="Attackable" />
-			<attribute name="Script Data" value="232 3 0 0 232 3 0 0 100 0 0 0 109 111 110 111 108 105 116 104 0 0" />
-			<attribute name="healthPoints_" value="1000" />
-			<attribute name="maxHealthPoints_" value="1000" />
+			<attribute name="Script Data" value="10 0 0 0 10 0 0 0 100 0 0 0 109 111 110 111 108 105 116 104 0 0" />
+			<attribute name="healthPoints_" value="10" />
+			<attribute name="maxHealthPoints_" value="10" />
 			<attribute name="scorePoints_" value="100" />
 			<attribute name="team_" value="" />
 			<attribute name="type_" value="monolith" />
 			<attribute name="healthSize_" value="0" />
+		</component>
+		<component type="ScriptInstance" id="16777521">
+			<attribute name="Delayed Method Calls" value="0" />
+			<attribute name="Script File" value="ScriptFile;Scripts/Animated.as" />
+			<attribute name="Class Name" value="Animated" />
+			<attribute name="Script Data" value="73 100 108 101 0 77 111 100 101 108 115 47 77 111 110 111 108 105 116 104 95 65 114 109 97 116 117 114 101 73 100 108 101 46 97 110 105 0 77 111 100 101 108 115 47 77 111 110 111 108 105 116 104 95 65 114 109 97 116 117 114 101 73 100 108 101 46 97 110 105 0 77 111 100 101 108 115 47 77 111 110 111 108 105 116 104 95 65 114 109 97 116 117 114 101 68 105 101 46 97 110 105 0" />
+			<attribute name="animController" value="0" />
+			<attribute name="state" value="Idle" />
+			<attribute name="idleAnim" value="Models/Monolith_ArmatureIdle.ani" />
+			<attribute name="attackAnim" value="Models/Monolith_ArmatureIdle.ani" />
+			<attribute name="dieAnim" value="Models/Monolith_ArmatureDie.ani" />
+		</component>
+		<component type="ScriptInstance" id="16777522">
+			<attribute name="Delayed Method Calls" value="0" />
+			<attribute name="Script File" value="ScriptFile;Scripts/GameOver.as" />
+			<attribute name="Class Name" value="GameOver" />
+			<attribute name="Script Data" value="85 73 47 71 97 109 101 79 118 101 114 46 120 109 108 0 85 73 47 82 101 108 121 107 83 116 121 108 101 46 120 109 108 0" />
+			<attribute name="dialog_" value="UI/GameOver.xml" />
+			<attribute name="style_" value="UI/RelykStyle.xml" />
 		</component>
 		<node id="16777232">
 			<attribute name="Is Enabled" value="true" />
@@ -196,9 +215,17 @@
 			<attribute name="Rotation" value="1 0 0 0" />
 			<attribute name="Scale" value="0.01 0.01 0.01" />
 			<attribute name="Variables" />
-			<component type="StaticModel" id="16777284">
+			<component type="AnimatedModel" id="16777519">
 				<attribute name="Model" value="Model;Models/Monolith.mdl" />
-				<attribute name="Material" value="Material;" />
+				<attribute name="Material" value="Material;Materials/Orange.xml" />
+				<attribute name="Animation States">
+					<variant type="Int" value="0" />
+				</attribute>
+			</component>
+			<component type="AnimationController" id="16777520">
+				<attribute name="Node Animation States">
+					<variant type="Int" value="0" />
+				</attribute>
 			</component>
 		</node>
 		<node id="16777308">
