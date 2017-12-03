@@ -193,8 +193,8 @@
 		</component>
 		<component type="ScriptInstance" id="16777371">
 			<attribute name="Delayed Method Calls" value="0" />
-			<attribute name="Script File" value="ScriptFile;Scripts/PlayerStats.as" />
-			<attribute name="Class Name" value="PlayerStats" />
+			<attribute name="Script File" value="ScriptFile;Scripts/DividerHandler.as" />
+			<attribute name="Class Name" value="DividerHandler" />
 			<attribute name="aiCount">
 				<variant hash="2766062362" type="Int" value="0" />
 				<variant hash="2971596402" type="Int" value="0" />

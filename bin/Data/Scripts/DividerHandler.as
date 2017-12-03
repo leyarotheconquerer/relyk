@@ -1,4 +1,4 @@
-class PlayerStats : ScriptObject
+class DividerHandler : ScriptObject
 {
 	VariantMap aiCount;
 	VariantMap playerCount;
