@@ -1,0 +1,3 @@
+<animation>
+	<trigger normalizedtime="1" type="String" value="Complete" />
+</animation>

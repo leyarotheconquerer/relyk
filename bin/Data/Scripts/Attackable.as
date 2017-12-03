@@ -24,6 +24,8 @@ class Attackable : ScriptObject
 
 	void DelayedStart()
 	{
+		Node@ modelNode = node.GetChild("Model", true);
+		SubscribeToEvent(modelNode, "AnimationTrigger", "HandleDeathAnimationTrigger");
 	}
 
 	void Save(Serializer& serializer)
@@ -46,6 +48,12 @@ class Attackable : ScriptObject
 
 	void HandleUnitAttack(StringHash type, VariantMap& data)
 	{
+		// Dead units can't be attacked
+		if (healthPoints_ <= 0)
+		{
+			return;
+		}
+
 		int damage = data["Damage"].GetInt();
 		bool typeMatch = data["Type"].GetString() == type_;
 		if (typeMatch)
@@ -67,6 +75,18 @@ class Attackable : ScriptObject
 		if (healthPoints_ <= 0)
 		{
 			log.Info(node.name + " (" + node.id + ") is dead");
+			DisableNode(node);
+			VariantMap deathAnimData;
+			deathAnimData["State"] = "Die";
+			node.SendEvent("UnitAnimate", deathAnimData);
+		}
+	}
+
+	void HandleDeathAnimationTrigger(StringHash type, VariantMap& data)
+	{
+		log.Debug("Animation says hello: " + data["Data"].GetString() + " (" + data["Name"].GetString() + ")");
+		if (data["Data"].GetString() == "Complete")
+		{
 			VariantMap deathData;
 			deathData["Team"] = team_;
 			deathData["Type"] = type_;
@@ -74,6 +94,23 @@ class Attackable : ScriptObject
 			deathData["Score"] = scorePoints_;
 			SendEvent("UnitDied", deathData);
 			node.Remove();
+		}
+	}
+
+	void DisableNode(Node@ node)
+	{
+		Array<Component@> components = node.GetComponents();
+		for(uint i = 0; i < components.length; i++)
+		{
+			if (components[i].typeName == "ScriptInstance")
+			{
+				ScriptInstance@ instance = cast<ScriptInstance>(components[i]);
+				if (not instance.IsA("Attackable") && not instance.IsA("Animated"))
+				{
+					instance.Remove();
+					components[i].Remove();
+				}
+			}
 		}
 	}
 }

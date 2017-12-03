@@ -10,6 +10,7 @@ class Attacker : ScriptObject
 	float attackRange_;
 	int attackStrength_;
 	int maxAttackStrength_;
+	Node@ target_;
 
 	Attacker()
 	{
@@ -33,6 +34,9 @@ class Attacker : ScriptObject
 		node.AddTag(team_);
 		node.AddTag(type_);
 		timer_.Reset();
+
+		Node@ modelNode = node.GetChild("Model");
+		SubscribeToEvent(modelNode, "AnimationTrigger", "HandleAttackAnimationTrigger");
 	}
 
 	void Save(Serializer& serializer)
@@ -69,11 +73,10 @@ class Attacker : ScriptObject
 				Node@ target = GetTarget(bodies);
 				if (target !is null)
 				{
-					VariantMap sendData;
-					sendData["Damage"] = attackStrength_;
-					sendData["Type"] = type_;
-					sendData["Attacker"] = node;
-					target.SendEvent("UnitAttack", sendData);
+					target_ = target;
+					VariantMap attackAnimData;
+					attackAnimData["State"] = "Attack";
+					node.SendEvent("UnitAnimate", attackAnimData);
 				}
 			}
 			timer_.Reset();
@@ -116,6 +119,19 @@ class Attacker : ScriptObject
 			attackStrength_ = maxAttackStrength_ / divider_;
 			attackStrength_ = attackStrength_ < 1 ? 1 : attackStrength_;
 			log.Debug(node.name + " (" + node.id + ") reporting divider of " + divider_ + " (attack = " + attackStrength_ + ")");
+		}
+	}
+
+	void HandleAttackAnimationTrigger(StringHash type, VariantMap& data)
+	{
+		if (data["Data"] == "Attack" && target_ !is null)
+		{
+			VariantMap sendData;
+			sendData["Damage"] = attackStrength_;
+			sendData["Type"] = type_;
+			sendData["Attacker"] = node;
+			target_.SendEvent("UnitAttack", sendData);
+			target_ = null;
 		}
 	}
 

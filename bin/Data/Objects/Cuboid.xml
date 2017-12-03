@@ -1,33 +1,34 @@
 <?xml version="1.0"?>
-<node id="16777217">
+<node id="16777256">
 	<attribute name="Is Enabled" value="true" />
 	<attribute name="Name" value="Cuboid" />
 	<attribute name="Tags">
 		<string value="debug" />
 		<string value="player" />
+		<string value="cuboid" />
 	</attribute>
-	<attribute name="Position" value="0 0 -7.20682" />
+	<attribute name="Position" value="0 0 -10" />
 	<attribute name="Rotation" value="1 0 0 0" />
 	<attribute name="Scale" value="1 1 1" />
 	<attribute name="Variables" />
-	<component type="RigidBody" id="16777235">
-		<attribute name="Physics Position" value="0 0 -7.20682" />
+	<component type="RigidBody" id="16777393">
+		<attribute name="Physics Position" value="0 0 -10" />
 		<attribute name="Collision Layer" value="5" />
 	</component>
-	<component type="CollisionShape" id="16777237">
+	<component type="CollisionShape" id="16777394">
 		<attribute name="Size" value="2.5 2.5 2.5" />
-		<attribute name="Offset Position" value="0 2.25 0" />
+		<attribute name="Offset Position" value="0 3 0" />
 	</component>
-	<component type="ScriptInstance" id="16777238">
+	<component type="ScriptInstance" id="16777395">
 		<attribute name="Delayed Method Calls" value="0" />
 		<attribute name="Script File" value="ScriptFile;Scripts/Selectable.as" />
 		<attribute name="Class Name" value="Selectable" />
-		<attribute name="Script Data" value="77 97 116 101 114 105 97 108 115 47 82 101 100 46 120 109 108 0 77 97 116 101 114 105 97 108 115 47 68 101 102 97 117 108 116 71 114 101 121 46 120 109 108 0" />
-		<attribute name="selected_" value="Materials/Red.xml" />
-		<attribute name="unselected_" value="Materials/DefaultGrey.xml" />
+		<attribute name="Script Data" value="77 97 116 101 114 105 97 108 115 47 67 117 98 111 105 100 83 101 108 101 99 116 101 100 46 120 109 108 0 77 97 116 101 114 105 97 108 115 47 67 117 98 111 105 100 85 110 115 101 108 101 99 116 101 100 46 120 109 108 0" />
+		<attribute name="selected_" value="Materials/CuboidSelected.xml" />
+		<attribute name="unselected_" value="Materials/CuboidUnselected.xml" />
 		<attribute name="isSelected_" value="false" />
 	</component>
-	<component type="ScriptInstance" id="16777253">
+	<component type="ScriptInstance" id="16777396">
 		<attribute name="Delayed Method Calls" value="0" />
 		<attribute name="Script File" value="ScriptFile;Scripts/Movable.as" />
 		<attribute name="Class Name" value="Movable" />
@@ -35,38 +36,178 @@
 		<attribute name="height_" value="2" />
 		<attribute name="maxSpeed_" value="3" />
 		<attribute name="maxAccel_" value="5" />
-		<attribute name="crowdAgent_" value="0" />
+		<attribute name="crowdAgent_" value="16777232" />
 	</component>
-	<component type="CrowdAgent" id="16777288">
+	<component type="CrowdAgent" id="16777397">
 		<attribute name="Target Position" value="2.6901 0.500009 -7.31837" />
 		<attribute name="Requested Target Type" value="Position" />
 		<attribute name="Max Accel" value="5" />
 		<attribute name="Max Speed" value="3" />
 		<attribute name="Height" value="2" />
 	</component>
-	<component type="ScriptInstance" id="16777316">
+	<component type="ScriptInstance" id="16777398">
 		<attribute name="Delayed Method Calls" value="0" />
 		<attribute name="Script File" value="ScriptFile;Scripts/Attacker.as" />
 		<attribute name="Class Name" value="Attacker" />
-		<attribute name="Script Data" value="112 108 97 121 101 114 0 99 117 98 111 105 100 0 232 3 0 0 0 0 32 65 10 0 0 0" />
+		<attribute name="Script Data" value="112 108 97 121 101 114 0 99 117 98 111 105 100 0 232 3 0 0 0 0 32 65 10 0 0 0 10 0 0 0" />
 		<attribute name="team_" value="player" />
 		<attribute name="type_" value="cuboid" />
 		<attribute name="divider_" value="0" />
 		<attribute name="attackDelay_" value="1000" />
 		<attribute name="attackRange_" value="10" />
 		<attribute name="attackStrength_" value="10" />
+		<attribute name="maxAttackStrength_" value="10" />
 	</component>
-	<node id="2">
+	<component type="ScriptInstance" id="16777401">
+		<attribute name="Delayed Method Calls" value="0" />
+		<attribute name="Script File" value="ScriptFile;Scripts/Animated.as" />
+		<attribute name="Class Name" value="Animated" />
+		<attribute name="Script Data" value="73 100 108 101 0 77 111 100 101 108 115 47 67 117 98 111 105 100 95 65 114 109 97 116 117 114 101 73 100 108 101 46 97 110 105 0 77 111 100 101 108 115 47 67 117 98 111 105 100 95 65 114 109 97 116 117 114 101 65 116 116 97 99 107 46 97 110 105 0 77 111 100 101 108 115 47 67 117 98 111 105 100 95 65 114 109 97 116 117 114 101 68 105 101 46 97 110 105 0" />
+		<attribute name="animController" value="0" />
+		<attribute name="state" value="Idle" />
+		<attribute name="idleAnim" value="Models/Cuboid_ArmatureIdle.ani" />
+		<attribute name="attackAnim" value="Models/Cuboid_ArmatureAttack.ani" />
+		<attribute name="dieAnim" value="Models/Cuboid_ArmatureDie.ani" />
+	</component>
+	<node id="16777257">
 		<attribute name="Is Enabled" value="true" />
 		<attribute name="Name" value="Model" />
 		<attribute name="Tags" />
-		<attribute name="Position" value="0 2.25 0" />
+		<attribute name="Position" value="0 3 0" />
 		<attribute name="Rotation" value="1 0 0 0" />
 		<attribute name="Scale" value="0.01 0.01 0.01" />
 		<attribute name="Variables" />
-		<component type="StaticModel" id="3">
+		<component type="AnimatedModel" id="16777399">
 			<attribute name="Model" value="Model;Models/Cuboid.mdl" />
-			<attribute name="Material" value="Material;Materials/DefaultGrey.xml" />
+			<attribute name="Material" value="Material;Materials/CuboidUnselected.xml" />
+			<attribute name="Bone Animation Enabled">
+				<variant type="Bool" value="true" />
+				<variant type="Bool" value="true" />
+				<variant type="Bool" value="true" />
+				<variant type="Bool" value="true" />
+				<variant type="Bool" value="true" />
+				<variant type="Bool" value="true" />
+				<variant type="Bool" value="true" />
+				<variant type="Bool" value="true" />
+				<variant type="Bool" value="true" />
+				<variant type="Bool" value="true" />
+			</attribute>
+			<attribute name="Animation States">
+				<variant type="Int" value="3" />
+				<variant type="ResourceRef" value="Animation;Models/Cuboid_ArmatureIdle.ani" />
+				<variant type="String" value="Armature" />
+				<variant type="Bool" value="true" />
+				<variant type="Float" value="0" />
+				<variant type="Float" value="0.384459" />
+				<variant type="Int" value="0" />
+				<variant type="ResourceRef" value="Animation;Models/Cuboid_ArmatureAttack.ani" />
+				<variant type="String" value="Armature" />
+				<variant type="Bool" value="false" />
+				<variant type="Float" value="0" />
+				<variant type="Float" value="1.25" />
+				<variant type="Int" value="0" />
+				<variant type="ResourceRef" value="Animation;Models/Cuboid_ArmatureDie.ani" />
+				<variant type="String" value="Armature" />
+				<variant type="Bool" value="false" />
+				<variant type="Float" value="0" />
+				<variant type="Float" value="1.25" />
+				<variant type="Int" value="0" />
+			</attribute>
 		</component>
+		<component type="AnimationController" id="16777400">
+			<attribute name="Node Animation States">
+				<variant type="Int" value="0" />
+			</attribute>
+		</component>
+		<node id="16777258">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="Armature" />
+			<attribute name="Tags" />
+			<attribute name="Position" value="0 0 -0" />
+			<attribute name="Rotation" value="0.707107 0.707107 0 0" />
+			<attribute name="Scale" value="100 100 100" />
+			<attribute name="Variables" />
+			<node id="16777259">
+				<attribute name="Is Enabled" value="true" />
+				<attribute name="Name" value="Root" />
+				<attribute name="Tags" />
+				<attribute name="Position" value="0 0 0.00268076" />
+				<attribute name="Rotation" value="0.707107 -0.707107 0 0" />
+				<attribute name="Scale" value="1 1 1" />
+				<attribute name="Variables" />
+				<node id="16777260">
+					<attribute name="Is Enabled" value="true" />
+					<attribute name="Name" value="AftUpperLeft" />
+					<attribute name="Tags" />
+					<attribute name="Position" value="0 0 -0" />
+					<attribute name="Rotation" value="0.756169 -0.11018 -0.456107 0.456107" />
+					<attribute name="Scale" value="1 1 1" />
+					<attribute name="Variables" />
+				</node>
+				<node id="16777261">
+					<attribute name="Is Enabled" value="true" />
+					<attribute name="Name" value="ForwardUpperLeft" />
+					<attribute name="Tags" />
+					<attribute name="Position" value="0 0 -0" />
+					<attribute name="Rotation" value="0.815283 0.449661 -0.323178 0.169337" />
+					<attribute name="Scale" value="1 1 1" />
+					<attribute name="Variables" />
+				</node>
+				<node id="16777262">
+					<attribute name="Is Enabled" value="true" />
+					<attribute name="Name" value="AftUpperRight" />
+					<attribute name="Tags" />
+					<attribute name="Position" value="0 0 -0" />
+					<attribute name="Rotation" value="0.338175 0.179122 0.816425 -0.432439" />
+					<attribute name="Scale" value="1 1 1" />
+					<attribute name="Variables" />
+				</node>
+				<node id="16777263">
+					<attribute name="Is Enabled" value="true" />
+					<attribute name="Name" value="ForwardUpperRight" />
+					<attribute name="Tags" />
+					<attribute name="Position" value="0 0 -0" />
+					<attribute name="Rotation" value="0.819432 0.447728 0.31405 -0.171593" />
+					<attribute name="Scale" value="1 1 1" />
+					<attribute name="Variables" />
+				</node>
+				<node id="16777264">
+					<attribute name="Is Enabled" value="true" />
+					<attribute name="Name" value="AftBottomLeft" />
+					<attribute name="Tags" />
+					<attribute name="Position" value="0 -0.0480378 -0" />
+					<attribute name="Rotation" value="0.282346 0.127907 -0.374772 0.873765" />
+					<attribute name="Scale" value="1 1 1" />
+					<attribute name="Variables" />
+				</node>
+				<node id="16777265">
+					<attribute name="Is Enabled" value="true" />
+					<attribute name="Name" value="ForwardBottomLeft" />
+					<attribute name="Tags" />
+					<attribute name="Position" value="0 -0.0480378 -0" />
+					<attribute name="Rotation" value="0.446675 0.820732 -0.177062 0.309079" />
+					<attribute name="Scale" value="1 1 1" />
+					<attribute name="Variables" />
+				</node>
+				<node id="16777266">
+					<attribute name="Is Enabled" value="true" />
+					<attribute name="Name" value="AftBottomRight" />
+					<attribute name="Tags" />
+					<attribute name="Position" value="0 -0.0480378 -0" />
+					<attribute name="Rotation" value="-0.179122 -0.338174 -0.432439 0.816425" />
+					<attribute name="Scale" value="1 1 1" />
+					<attribute name="Variables" />
+				</node>
+				<node id="16777267">
+					<attribute name="Is Enabled" value="true" />
+					<attribute name="Name" value="ForwardBottomRight" />
+					<attribute name="Tags" />
+					<attribute name="Position" value="0 -0.0480378 -0" />
+					<attribute name="Rotation" value="0.447728 0.819432 0.171593 -0.31405" />
+					<attribute name="Scale" value="1 1 1" />
+					<attribute name="Variables" />
+				</node>
+			</node>
+		</node>
 	</node>
 </node>

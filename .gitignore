@@ -5,6 +5,7 @@ Makefile
 *.exe
 *.log
 *.blend[0-9]
+*.*~
 
 .vscode/
 CMakeFiles/

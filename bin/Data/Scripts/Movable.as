@@ -22,6 +22,8 @@ class Movable : ScriptObject
 
 	void DelayedStart()
 	{
+		CrowdManager@ manager = scene.GetComponent("CrowdManager");
+		manager.animationEnabled = true;
 		crowdAgent_ = node.GetComponent("CrowdAgent");
 		crowdAgent_.height = height_;
 		crowdAgent_.maxSpeed = maxSpeed_;
@@ -44,6 +46,8 @@ class Movable : ScriptObject
 
 	void Stop()
 	{
+		crowdAgent_.enabled = false;
+		crowdAgent_.Remove();
 		UnsubscribeFromEvent("PostRenderUpdate");
 	}
 

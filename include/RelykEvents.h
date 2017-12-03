@@ -70,6 +70,11 @@ namespace Relyk
 		URHO3D_PARAM(P_DIVIDER, Divider);       // int
 	}
 
+	URHO3D_EVENT(E_UNITANIMATE, UnitAnimate)
+	{
+		URHO3D_PARAM(P_STATE, State);           // Urho3D::String
+	}
+
 	URHO3D_EVENT(E_PLAYERPOINTS, PlayerPoints)
 	{
 		URHO3D_PARAM(P_TOTAL, Total);           // int
