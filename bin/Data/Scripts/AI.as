@@ -53,10 +53,9 @@ class AI : ScriptObject
 			}
 			else if(timer_.GetMSec(false) >= tickRate_)
 			{
-				CrowdManager@ crowd = scene.GetComponent("CrowdManager");
-				NavigationMesh@ navMesh = scene.GetComponent("NavigationMesh");
-				Vector3 nearest = navMesh.FindNearestPoint(monolith_.position);
-				crowd.SetCrowdTarget(nearest, node);
+				VariantMap sendData;
+				sendData["Target"] = monolith_.position;
+				node.SendEvent("UnitMove", sendData);
 				timer_.Reset();
 			}
 		}

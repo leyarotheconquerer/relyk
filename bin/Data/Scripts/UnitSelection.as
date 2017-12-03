@@ -45,7 +45,7 @@ class UnitSelection : ScriptObject
 		int qualifiers = data["Qualifiers"].GetInt();
 		if (button == MOUSEB_LEFT)
 		{
-			//log.Debug("Casting up to " + maxRayDistance_);
+			log.Debug("Casting up to " + maxRayDistance_);
 			PhysicsRaycastResult result = physicsWorld.RaycastSingle(
 				viewport.GetScreenRay(input.mousePosition.x, input.mousePosition.y),
 				maxRayDistance_,

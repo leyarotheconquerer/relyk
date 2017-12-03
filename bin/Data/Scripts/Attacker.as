@@ -54,15 +54,12 @@ class Attacker : ScriptObject
 				Sphere(node.position, attackRange_),
 				ATTACKABLE_LAYER
 			);
-			log.Debug("Evaluate attack for " + node.name + " (" + node.id + ")");
 
 			if (bodies.length > 0)
 			{
-				log.Debug(bodies.length + " bodies in range");
 				Node@ target = GetTarget(bodies);
 				if (target !is null)
 				{
-					log.Info("Attacking " + target.name + " (" + target.id + ")");
 					VariantMap sendData;
 					sendData["Damage"] = attackStrength_;
 					sendData["Type"] = type_;

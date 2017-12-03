@@ -63,6 +63,7 @@ class Attackable : ScriptObject
 			deathData["Type"] = type_;
 			deathData["Node"] = node;
 			SendEvent("UnitDied", deathData);
+			node.Remove();
 		}
 	}
 }
