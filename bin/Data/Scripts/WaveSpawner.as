@@ -69,8 +69,7 @@ class WaveSpawner : ScriptObject
 
 	void HandleUnitDied(StringHash type, VariantMap& data)
 	{
-		Node@ unit = data["Node"].GetPtr();
-		if (unit.HasTag("ai"))
+		if (data["Team"].GetString() == "ai")
 		{
 			killCounter_ -= 1;
 			killCounter_ = killCounter_ < 0 ? 0 : killCounter_;
@@ -137,6 +136,10 @@ class WaveSpawner : ScriptObject
 				spawner.position,
 				spawner.rotation
 			);
+			VariantMap spawnData;
+			spawnData["Team"] = "ai";
+			spawnData["Type"] = type;
+			SendEvent("UnitSpawn", spawnData);
 			log.Debug("Spawned " + type + " at spawner " + spawnIndex + " = " + (node !is null));
 		}
 	}

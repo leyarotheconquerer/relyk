@@ -38,8 +38,22 @@ namespace Relyk
 
 	URHO3D_EVENT(E_UNITDIED, UnitDied)
 	{
+		URHO3D_PARAM(P_TEAM, Team);             // Urho3D::String
 		URHO3D_PARAM(P_TYPE, Type);             // Urho3D::String
 		URHO3D_PARAM(P_NODE, Node);             // Urho3D::Node*
+	}
+
+	URHO3D_EVENT(E_UNITSPAWN, UnitSpawn)
+	{
+		URHO3D_PARAM(P_TEAM, Team);             // Urho3D::String
+		URHO3D_PARAM(P_TYPE, Type);             // Urho3D::String
+	}
+
+	URHO3D_EVENT(E_UNITDIVIDER, UnitDivider)
+	{
+		URHO3D_PARAM(P_TEAM, Team);             // Urho3D::String
+		URHO3D_PARAM(P_TYPE, Type);             // Urho3D::String
+		URHO3D_PARAM(P_DIVIDER, Divider);       // int
 	}
 }
 

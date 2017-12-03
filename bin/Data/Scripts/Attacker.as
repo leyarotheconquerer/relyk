@@ -3,24 +3,29 @@ const int ATTACKABLE_LAYER = 4;
 class Attacker : ScriptObject
 {
 	Timer timer_;
-	String target_;
+	String team_;
 	String type_;
+	int divider_;
 	uint attackDelay_;
 	float attackRange_;
 	int attackStrength_;
+	int maxAttackStrength_;
 
 	Attacker()
 	{
-		target_ = "player";
+		team_ = "player";
 		type_ = "cuboid";
 		attackDelay_ = 1000;
 		attackRange_ = 10;
 		attackStrength_ = 10;
+		maxAttackStrength_ = 10;
+		divider_ = 1;
 	}
 
 	void Start()
 	{
 		SubscribeToEvent("PostRenderUpdate", "HandlePostRenderUpdate");
+		SubscribeToEvent("UnitDivider", "HandleUnitDivider");
 	}
 
 	void DelayedStart()
@@ -30,20 +35,22 @@ class Attacker : ScriptObject
 
 	void Save(Serializer& serializer)
 	{
-		serializer.WriteString(target_);
+		serializer.WriteString(team_);
 		serializer.WriteString(type_);
 		serializer.WriteInt(attackDelay_);
 		serializer.WriteFloat(attackRange_);
 		serializer.WriteInt(attackStrength_);
+		serializer.WriteInt(maxAttackStrength_);
 	}
 
 	void Load(Deserializer& deserializer)
 	{
-		target_ = deserializer.ReadString();
+		team_ = deserializer.ReadString();
 		type_ = deserializer.ReadString();
 		attackDelay_ = deserializer.ReadInt();
 		attackRange_ = deserializer.ReadFloat();
 		attackStrength_ = deserializer.ReadInt();
+		maxAttackStrength_ = deserializer.ReadInt();
 	}
 
 	void FixedUpdate(float timestep)
@@ -71,6 +78,12 @@ class Attacker : ScriptObject
 		}
 	}
 
+	void Stop()
+	{
+		UnsubscribeFromEvent("PostRenderUpdate");
+		UnsubscribeFromEvent("UnitDivider");
+	}
+
 	Node@ GetTarget(Array<RigidBody@>@ bodies)
 	{
 		Node@ target = null;
@@ -78,7 +91,7 @@ class Attacker : ScriptObject
 		for(uint i = 0; i < bodies.length; i++)
 		{
 			Node@ other = bodies[i].node;
-			if (other.HasTag(target_))
+			if (not other.HasTag(team_))
 			{
 				float distance = (other.position - node.position).lengthSquared;
 				if (distance < minDistance)
@@ -91,8 +104,17 @@ class Attacker : ScriptObject
 		return target;
 	}
 
-	void Stop()
+	void HandleUnitDivider(StringHash type, VariantMap& data)
 	{
+		if (
+			data["Team"].GetString() == team_ &&
+			data["Type"].GetString() == type_
+		) {
+			divider_ = data["Divider"].GetInt();
+			attackStrength_ = maxAttackStrength_ / divider_;
+			attackStrength_ = attackStrength_ < 1 ? 1 : attackStrength_;
+			log.Debug(node.name + " (" + node.id + ") reporting divider of " + divider_ + " (attack = " + attackStrength_ + ")");
+		}
 	}
 
 	void HandlePostRenderUpdate(StringHash type, VariantMap& data)

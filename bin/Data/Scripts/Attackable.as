@@ -4,6 +4,7 @@ class Attackable : ScriptObject
 {
 	int healthPoints_;
 	int maxHealthPoints_;
+	String team_;
 	String type_;
 
 	Attackable()
@@ -11,6 +12,7 @@ class Attackable : ScriptObject
 		maxHealthPoints_ = 100;
 		healthPoints_ = maxHealthPoints_;
 		type_ = "cuboid";
+		team_ = "player";
 	}
 
 	void Start()
@@ -27,6 +29,7 @@ class Attackable : ScriptObject
 		serializer.WriteInt(healthPoints_);
 		serializer.WriteInt(maxHealthPoints_);
 		serializer.WriteString(type_);
+		serializer.WriteString(team_);
 	}
 
 	void Load(Deserializer& deserializer)
@@ -34,6 +37,7 @@ class Attackable : ScriptObject
 		healthPoints_ = deserializer.ReadInt();
 		maxHealthPoints_ = deserializer.ReadInt();
 		type_ = deserializer.ReadString();
+		team_ = deserializer.ReadString();
 	}
 
 	void HandleUnitAttack(StringHash type, VariantMap& data)
@@ -60,6 +64,7 @@ class Attackable : ScriptObject
 		{
 			log.Info(node.name + " (" + node.id + ") is dead");
 			VariantMap deathData;
+			deathData["Team"] = team_;
 			deathData["Type"] = type_;
 			deathData["Node"] = node;
 			SendEvent("UnitDied", deathData);

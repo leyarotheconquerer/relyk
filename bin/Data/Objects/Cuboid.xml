@@ -44,6 +44,18 @@
 		<attribute name="Max Speed" value="3" />
 		<attribute name="Height" value="2" />
 	</component>
+	<component type="ScriptInstance" id="16777316">
+		<attribute name="Delayed Method Calls" value="0" />
+		<attribute name="Script File" value="ScriptFile;Scripts/Attacker.as" />
+		<attribute name="Class Name" value="Attacker" />
+		<attribute name="Script Data" value="112 108 97 121 101 114 0 99 117 98 111 105 100 0 232 3 0 0 0 0 32 65 10 0 0 0" />
+		<attribute name="team_" value="player" />
+		<attribute name="type_" value="cuboid" />
+		<attribute name="divider_" value="0" />
+		<attribute name="attackDelay_" value="1000" />
+		<attribute name="attackRange_" value="10" />
+		<attribute name="attackStrength_" value="10" />
+	</component>
 	<node id="2">
 		<attribute name="Is Enabled" value="true" />
 		<attribute name="Name" value="Model" />
