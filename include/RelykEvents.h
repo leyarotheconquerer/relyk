@@ -75,6 +75,14 @@ namespace Relyk
 		URHO3D_PARAM(P_STATE, State);           // Urho3D::String
 	}
 
+	URHO3D_EVENT(E_BULLETFIRE, BulletFire)
+	{
+		URHO3D_PARAM(P_TARGET, Target);         // Urho3D::Node*
+		URHO3D_PARAM(P_ATTACKER, Attacker);     // Urho3D::Node*
+		URHO3D_PARAM(P_TYPE, Type);             // Urho3D::String
+		URHO3D_PARAM(P_DAMAGE, Damage);         // int
+	}
+
 	URHO3D_EVENT(E_PLAYERPOINTS, PlayerPoints)
 	{
 		URHO3D_PARAM(P_TOTAL, Total);           // int

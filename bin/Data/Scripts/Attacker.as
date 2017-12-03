@@ -5,6 +5,7 @@ class Attacker : ScriptObject
 	Timer timer_;
 	String team_;
 	String type_;
+	String bullet_;
 	int divider_;
 	uint attackDelay_;
 	float attackRange_;
@@ -16,6 +17,7 @@ class Attacker : ScriptObject
 	{
 		team_ = "player";
 		type_ = "cuboid";
+		bullet_ = "Objects/Bullet.xml";
 		attackDelay_ = 1000;
 		attackRange_ = 10;
 		attackStrength_ = 10;
@@ -43,6 +45,7 @@ class Attacker : ScriptObject
 	{
 		serializer.WriteString(team_);
 		serializer.WriteString(type_);
+		serializer.WriteString(bullet_);
 		serializer.WriteInt(attackDelay_);
 		serializer.WriteFloat(attackRange_);
 		serializer.WriteInt(attackStrength_);
@@ -53,6 +56,7 @@ class Attacker : ScriptObject
 	{
 		team_ = deserializer.ReadString();
 		type_ = deserializer.ReadString();
+		bullet_ = deserializer.ReadString();
 		attackDelay_ = deserializer.ReadInt();
 		attackRange_ = deserializer.ReadFloat();
 		attackStrength_ = deserializer.ReadInt();
@@ -126,11 +130,18 @@ class Attacker : ScriptObject
 	{
 		if (data["Data"] == "Attack" && target_ !is null)
 		{
+			Node@ center = node.GetChild("Center");
+			Node@ bullet = scene.InstantiateXML(
+				cache.GetResource("XMLFile", bullet_),
+				center.worldPosition,
+				node.rotation
+			);
 			VariantMap sendData;
 			sendData["Damage"] = attackStrength_;
 			sendData["Type"] = type_;
 			sendData["Attacker"] = node;
-			target_.SendEvent("UnitAttack", sendData);
+			sendData["Target"] = target_;
+			bullet.SendEvent("BulletFire", sendData);
 			target_ = null;
 		}
 	}

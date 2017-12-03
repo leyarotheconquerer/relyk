@@ -49,14 +49,16 @@
 		<attribute name="Delayed Method Calls" value="0" />
 		<attribute name="Script File" value="ScriptFile;Scripts/Attacker.as" />
 		<attribute name="Class Name" value="Attacker" />
-		<attribute name="Script Data" value="112 108 97 121 101 114 0 99 117 98 111 105 100 0 232 3 0 0 0 0 32 65 10 0 0 0 10 0 0 0" />
+		<attribute name="Script Data" value="112 108 97 121 101 114 0 99 117 98 111 105 100 0 79 98 106 101 99 116 115 47 66 117 108 108 101 116 46 120 109 108 0 232 3 0 0 0 0 32 65 10 0 0 0 10 0 0 0" />
 		<attribute name="team_" value="player" />
 		<attribute name="type_" value="cuboid" />
+		<attribute name="bullet_" value="Objects/Bullet.xml" />
 		<attribute name="divider_" value="0" />
 		<attribute name="attackDelay_" value="1000" />
 		<attribute name="attackRange_" value="10" />
 		<attribute name="attackStrength_" value="10" />
 		<attribute name="maxAttackStrength_" value="10" />
+		<attribute name="target_" value="0" />
 	</component>
 	<component type="ScriptInstance" id="16777401">
 		<attribute name="Delayed Method Calls" value="0" />
@@ -209,5 +211,14 @@
 				</node>
 			</node>
 		</node>
+	</node>
+	<node id="16777294">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="Center" />
+		<attribute name="Tags" />
+		<attribute name="Position" value="0 3 1.03765" />
+		<attribute name="Rotation" value="1 0 0 0" />
+		<attribute name="Scale" value="1 1 1" />
+		<attribute name="Variables" />
 	</node>
 </node>
