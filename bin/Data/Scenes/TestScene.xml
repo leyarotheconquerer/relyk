@@ -5,10 +5,10 @@
 	<attribute name="Smoothing Constant" value="50" />
 	<attribute name="Snap Threshold" value="5" />
 	<attribute name="Elapsed Time" value="0" />
-	<attribute name="Next Replicated Node ID" value="11" />
+	<attribute name="Next Replicated Node ID" value="14" />
 	<attribute name="Next Replicated Component ID" value="17" />
-	<attribute name="Next Local Node ID" value="16777384" />
-	<attribute name="Next Local Component ID" value="16777523" />
+	<attribute name="Next Local Node ID" value="16777459" />
+	<attribute name="Next Local Component ID" value="16777587" />
 	<attribute name="Variables" />
 	<attribute name="Variable Names" value="Min;Max" />
 	<component type="Octree" id="1" />
@@ -151,8 +151,8 @@
 			<attribute name="Class Name" value="UnitSelection" />
 			<attribute name="Script Data" value="232 3 0 0" />
 			<attribute name="maxRayDistance_" value="1000" />
-			<attribute name="position_" value="-10.0878 0.500017 4.19109" />
-			<attribute name="normal_" value="1.64509e-007 1 -1.31607e-007" />
+			<attribute name="position_" value="-0.536606 0.500008 23.9651" />
+			<attribute name="normal_" value="-8.77671e-008 1 -8.77671e-008" />
 		</component>
 	</node>
 	<node id="16777231">
@@ -180,9 +180,9 @@
 			<attribute name="Delayed Method Calls" value="0" />
 			<attribute name="Script File" value="ScriptFile;Scripts/Attackable.as" />
 			<attribute name="Class Name" value="Attackable" />
-			<attribute name="Script Data" value="10 0 0 0 10 0 0 0 100 0 0 0 109 111 110 111 108 105 116 104 0 0" />
-			<attribute name="healthPoints_" value="10" />
-			<attribute name="maxHealthPoints_" value="10" />
+			<attribute name="Script Data" value="244 1 0 0 244 1 0 0 100 0 0 0 109 111 110 111 108 105 116 104 0 0" />
+			<attribute name="healthPoints_" value="500" />
+			<attribute name="maxHealthPoints_" value="500" />
 			<attribute name="scorePoints_" value="100" />
 			<attribute name="team_" value="" />
 			<attribute name="type_" value="monolith" />
@@ -218,6 +218,15 @@
 			<component type="AnimatedModel" id="16777519">
 				<attribute name="Model" value="Model;Models/Monolith.mdl" />
 				<attribute name="Material" value="Material;Materials/Monolith.xml" />
+				<attribute name="Bone Animation Enabled">
+					<variant type="Bool" value="true" />
+					<variant type="Bool" value="true" />
+					<variant type="Bool" value="true" />
+					<variant type="Bool" value="true" />
+					<variant type="Bool" value="true" />
+					<variant type="Bool" value="true" />
+					<variant type="Bool" value="true" />
+				</attribute>
 				<attribute name="Animation States">
 					<variant type="Int" value="0" />
 				</attribute>
@@ -227,6 +236,69 @@
 					<variant type="Int" value="0" />
 				</attribute>
 			</component>
+			<node id="16777384">
+				<attribute name="Is Enabled" value="true" />
+				<attribute name="Name" value="Armature" />
+				<attribute name="Tags" />
+				<attribute name="Position" value="0 0 -0" />
+				<attribute name="Rotation" value="0.707107 0.707107 0 0" />
+				<attribute name="Scale" value="100 100 100" />
+				<attribute name="Variables" />
+				<node id="16777385">
+					<attribute name="Is Enabled" value="true" />
+					<attribute name="Name" value="Center" />
+					<attribute name="Tags" />
+					<attribute name="Position" value="0 0 -0.644673" />
+					<attribute name="Rotation" value="0.707107 -0.707107 0 0" />
+					<attribute name="Scale" value="1 1 1" />
+					<attribute name="Variables" />
+				</node>
+				<node id="16777386">
+					<attribute name="Is Enabled" value="true" />
+					<attribute name="Name" value="AftRight" />
+					<attribute name="Tags" />
+					<attribute name="Position" value="3.62061 -3.70479 -0.461159" />
+					<attribute name="Rotation" value="-0.5 0.5 -0.5 0.5" />
+					<attribute name="Scale" value="1 1 1" />
+					<attribute name="Variables" />
+				</node>
+				<node id="16777387">
+					<attribute name="Is Enabled" value="true" />
+					<attribute name="Name" value="ForRight" />
+					<attribute name="Tags" />
+					<attribute name="Position" value="3.62061 3.55516 -0.461159" />
+					<attribute name="Rotation" value="-0.5 0.5 -0.5 0.5" />
+					<attribute name="Scale" value="1 1 1" />
+					<attribute name="Variables" />
+				</node>
+				<node id="16777388">
+					<attribute name="Is Enabled" value="true" />
+					<attribute name="Name" value="AftLeft" />
+					<attribute name="Tags" />
+					<attribute name="Position" value="-3.676 -3.70479 -0.461159" />
+					<attribute name="Rotation" value="-0.5 0.5 -0.5 0.5" />
+					<attribute name="Scale" value="1 1 1" />
+					<attribute name="Variables" />
+				</node>
+				<node id="16777389">
+					<attribute name="Is Enabled" value="true" />
+					<attribute name="Name" value="ForLeft" />
+					<attribute name="Tags" />
+					<attribute name="Position" value="-3.676 3.55516 -0.461159" />
+					<attribute name="Rotation" value="-0.5 0.5 -0.5 0.5" />
+					<attribute name="Scale" value="1 1 1" />
+					<attribute name="Variables" />
+				</node>
+				<node id="16777390">
+					<attribute name="Is Enabled" value="true" />
+					<attribute name="Name" value="Root" />
+					<attribute name="Tags" />
+					<attribute name="Position" value="0 0 -0.644673" />
+					<attribute name="Rotation" value="0.99765 0.0103455 0.000702277 0.067725" />
+					<attribute name="Scale" value="1 1 1" />
+					<attribute name="Variables" />
+				</node>
+			</node>
 		</node>
 		<node id="16777308">
 			<attribute name="Is Enabled" value="true" />
@@ -287,7 +359,7 @@
 			<attribute name="Is Enabled" value="true" />
 			<attribute name="Name" value="Wave2" />
 			<attribute name="Tags">
-				<string value="cuboid" />
+				<string value="spheroid" />
 			</attribute>
 			<attribute name="Position" value="0 0 0" />
 			<attribute name="Rotation" value="1 0 0 0" />
@@ -295,6 +367,52 @@
 			<attribute name="Variables">
 				<variant hash="907392050" type="Int" value="1" />
 				<variant hash="906867268" type="Int" value="2" />
+			</attribute>
+		</node>
+		<node id="11">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="Wave3" />
+			<attribute name="Tags">
+				<string value="pyramoid" />
+			</attribute>
+			<attribute name="Position" value="0 0 0" />
+			<attribute name="Rotation" value="1 0 0 0" />
+			<attribute name="Scale" value="1 1 1" />
+			<attribute name="Variables">
+				<variant hash="907392050" type="Int" value="1" />
+				<variant hash="906867268" type="Int" value="2" />
+			</attribute>
+		</node>
+		<node id="12">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="Wave4" />
+			<attribute name="Tags">
+				<string value="pyramoid" />
+				<string value="spheroid" />
+				<string value="cuboid" />
+			</attribute>
+			<attribute name="Position" value="0 0 0" />
+			<attribute name="Rotation" value="1 0 0 0" />
+			<attribute name="Scale" value="1 1 1" />
+			<attribute name="Variables">
+				<variant hash="907392050" type="Int" value="4" />
+				<variant hash="906867268" type="Int" value="5" />
+			</attribute>
+		</node>
+		<node id="13">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="Wave5" />
+			<attribute name="Tags">
+				<string value="pyramoid" />
+				<string value="spheroid" />
+				<string value="cuboid" />
+			</attribute>
+			<attribute name="Position" value="0 0 0" />
+			<attribute name="Rotation" value="1 0 0 0" />
+			<attribute name="Scale" value="1 1 1" />
+			<attribute name="Variables">
+				<variant hash="907392050" type="Int" value="4" />
+				<variant hash="906867268" type="Int" value="20" />
 			</attribute>
 		</node>
 	</node>
@@ -315,37 +433,73 @@
 			<attribute name="Scale" value="1 1 1" />
 			<attribute name="Variables" />
 		</node>
+		<node id="16777456">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="Spawner1" />
+			<attribute name="Tags" />
+			<attribute name="Position" value="-21.2066 0 -18.3054" />
+			<attribute name="Rotation" value="1 0 0 0" />
+			<attribute name="Scale" value="1 1 1" />
+			<attribute name="Variables" />
+		</node>
+		<node id="16777457">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="Spawner1" />
+			<attribute name="Tags" />
+			<attribute name="Position" value="9.50762 0 34.7177" />
+			<attribute name="Rotation" value="1 0 0 0" />
+			<attribute name="Scale" value="1 1 1" />
+			<attribute name="Variables" />
+		</node>
+		<node id="16777458">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="Spawner1" />
+			<attribute name="Tags" />
+			<attribute name="Position" value="-21.2066 0 14.662" />
+			<attribute name="Rotation" value="1 0 0 0" />
+			<attribute name="Scale" value="1 1 1" />
+			<attribute name="Variables" />
+		</node>
 	</node>
-	<node id="16777256">
+	<node id="16777322">
 		<attribute name="Is Enabled" value="true" />
-		<attribute name="Name" value="Cuboid" />
+		<attribute name="Name" value="PlayerSpawn" />
+		<attribute name="Tags" />
+		<attribute name="Position" value="-6.55379 0.518649 -10.2537" />
+		<attribute name="Rotation" value="1 0 0 0" />
+		<attribute name="Scale" value="1 1 1" />
+		<attribute name="Variables" />
+	</node>
+	<node id="16777400">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="Pyramoid" />
 		<attribute name="Tags">
 			<string value="debug" />
 			<string value="player" />
-			<string value="cuboid" />
+			<string value="pyramoid" />
 		</attribute>
 		<attribute name="Position" value="0 0 -10" />
 		<attribute name="Rotation" value="1 0 0 0" />
 		<attribute name="Scale" value="1 1 1" />
 		<attribute name="Variables" />
-		<component type="RigidBody" id="16777393">
+		<component type="RigidBody" id="16777546">
 			<attribute name="Physics Position" value="0 0 -10" />
 			<attribute name="Collision Layer" value="5" />
 		</component>
-		<component type="CollisionShape" id="16777394">
+		<component type="CollisionShape" id="16777547">
 			<attribute name="Size" value="2.5 2.5 2.5" />
 			<attribute name="Offset Position" value="0 3 0" />
 		</component>
-		<component type="ScriptInstance" id="16777395">
+		<component type="ScriptInstance" id="16777548">
 			<attribute name="Delayed Method Calls" value="0" />
 			<attribute name="Script File" value="ScriptFile;Scripts/Selectable.as" />
 			<attribute name="Class Name" value="Selectable" />
-			<attribute name="Script Data" value="77 97 116 101 114 105 97 108 115 47 67 117 98 111 105 100 83 101 108 101 99 116 101 100 46 120 109 108 0 77 97 116 101 114 105 97 108 115 47 67 117 98 111 105 100 85 110 115 101 108 101 99 116 101 100 46 120 109 108 0" />
-			<attribute name="selected_" value="Materials/CuboidSelected.xml" />
-			<attribute name="unselected_" value="Materials/CuboidUnselected.xml" />
+			<attribute name="Script Data" value="77 97 116 101 114 105 97 108 115 47 80 121 114 97 109 111 105 100 83 101 108 101 99 116 101 100 46 120 109 108 0 77 97 116 101 114 105 97 108 115 47 80 121 114 97 109 111 105 100 85 110 115 101 108 101 99 116 101 100 46 120 109 108 0" />
+			<attribute name="selected_" value="Materials/PyramoidSelected.xml" />
+			<attribute name="unselected_" value="Materials/PyramoidUnselected.xml" />
 			<attribute name="isSelected_" value="false" />
 		</component>
-		<component type="ScriptInstance" id="16777396">
+		<component type="ScriptInstance" id="16777549">
 			<attribute name="Delayed Method Calls" value="0" />
 			<attribute name="Script File" value="ScriptFile;Scripts/Movable.as" />
 			<attribute name="Class Name" value="Movable" />
@@ -355,14 +509,202 @@
 			<attribute name="maxAccel_" value="5" />
 			<attribute name="crowdAgent_" value="0" />
 		</component>
-		<component type="CrowdAgent" id="16777397">
+		<component type="CrowdAgent" id="16777550">
 			<attribute name="Target Position" value="2.6901 0.500009 -7.31837" />
 			<attribute name="Requested Target Type" value="Position" />
 			<attribute name="Max Accel" value="5" />
 			<attribute name="Max Speed" value="3" />
 			<attribute name="Height" value="2" />
 		</component>
-		<component type="ScriptInstance" id="16777398">
+		<component type="ScriptInstance" id="16777551">
+			<attribute name="Delayed Method Calls" value="0" />
+			<attribute name="Script File" value="ScriptFile;Scripts/Attacker.as" />
+			<attribute name="Class Name" value="Attacker" />
+			<attribute name="Script Data" value="112 108 97 121 101 114 0 112 121 114 97 109 111 105 100 0 79 98 106 101 99 116 115 47 66 117 108 108 101 116 46 120 109 108 0 232 3 0 0 0 0 32 65 20 0 0 0 20 0 0 0" />
+			<attribute name="team_" value="player" />
+			<attribute name="type_" value="pyramoid" />
+			<attribute name="bullet_" value="Objects/Bullet.xml" />
+			<attribute name="divider_" value="0" />
+			<attribute name="attackDelay_" value="1000" />
+			<attribute name="attackRange_" value="10" />
+			<attribute name="attackStrength_" value="20" />
+			<attribute name="maxAttackStrength_" value="20" />
+			<attribute name="target_" value="0" />
+		</component>
+		<component type="ScriptInstance" id="16777552">
+			<attribute name="Delayed Method Calls" value="0" />
+			<attribute name="Script File" value="ScriptFile;Scripts/Animated.as" />
+			<attribute name="Class Name" value="Animated" />
+			<attribute name="Script Data" value="73 100 108 101 0 77 111 100 101 108 115 47 80 121 114 97 109 111 105 100 95 65 114 109 97 116 117 114 101 73 100 108 101 46 97 110 105 0 77 111 100 101 108 115 47 80 121 114 97 109 111 105 100 95 65 114 109 97 116 117 114 101 65 116 116 97 99 107 46 97 110 105 0 77 111 100 101 108 115 47 80 121 114 97 109 111 105 100 95 65 114 109 97 116 117 114 101 68 105 101 46 97 110 105 0" />
+			<attribute name="animController" value="0" />
+			<attribute name="state" value="Idle" />
+			<attribute name="idleAnim" value="Models/Pyramoid_ArmatureIdle.ani" />
+			<attribute name="attackAnim" value="Models/Pyramoid_ArmatureAttack.ani" />
+			<attribute name="dieAnim" value="Models/Pyramoid_ArmatureDie.ani" />
+		</component>
+		<node id="16777401">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="Model" />
+			<attribute name="Tags" />
+			<attribute name="Position" value="0 3 0" />
+			<attribute name="Rotation" value="1 0 0 0" />
+			<attribute name="Scale" value="0.01 0.01 0.01" />
+			<attribute name="Variables" />
+			<component type="AnimatedModel" id="16777553">
+				<attribute name="Model" value="Model;Models/Pyramoid.mdl" />
+				<attribute name="Material" value="Material;Materials/PyramoidUnselected.xml" />
+				<attribute name="Bone Animation Enabled">
+					<variant type="Bool" value="true" />
+					<variant type="Bool" value="true" />
+					<variant type="Bool" value="true" />
+					<variant type="Bool" value="true" />
+					<variant type="Bool" value="true" />
+					<variant type="Bool" value="true" />
+				</attribute>
+				<attribute name="Animation States">
+					<variant type="Int" value="0" />
+				</attribute>
+			</component>
+			<component type="AnimationController" id="16777554">
+				<attribute name="Node Animation States">
+					<variant type="Int" value="0" />
+				</attribute>
+			</component>
+			<node id="16777408">
+				<attribute name="Is Enabled" value="true" />
+				<attribute name="Name" value="Armature" />
+				<attribute name="Tags" />
+				<attribute name="Position" value="0 0 -0" />
+				<attribute name="Rotation" value="0.707107 0.707107 0 0" />
+				<attribute name="Scale" value="100 100 100" />
+				<attribute name="Variables" />
+				<node id="16777409">
+					<attribute name="Is Enabled" value="true" />
+					<attribute name="Name" value="Root" />
+					<attribute name="Tags" />
+					<attribute name="Position" value="0 0 -0.578805" />
+					<attribute name="Rotation" value="0.672417 0.672417 0.218759 0.218759" />
+					<attribute name="Scale" value="1 1 1" />
+					<attribute name="Variables" />
+					<node id="16777410">
+						<attribute name="Is Enabled" value="true" />
+						<attribute name="Name" value="Upper" />
+						<attribute name="Tags" />
+						<attribute name="Position" value="0 0 -0" />
+						<attribute name="Rotation" value="-1.85155e-007 0.950941 6.0237e-008 0.309373" />
+						<attribute name="Scale" value="1 1 1" />
+						<attribute name="Variables" />
+					</node>
+					<node id="16777411">
+						<attribute name="Is Enabled" value="true" />
+						<attribute name="Name" value="LowerRight" />
+						<attribute name="Tags" />
+						<attribute name="Position" value="0 0 -0" />
+						<attribute name="Rotation" value="0.544953 -0.376713 -0.616181 -0.425951" />
+						<attribute name="Scale" value="1 1 1" />
+						<attribute name="Variables" />
+					</node>
+					<node id="16777412">
+						<attribute name="Is Enabled" value="true" />
+						<attribute name="Name" value="LowerLeft" />
+						<attribute name="Tags" />
+						<attribute name="Position" value="0 0 -0" />
+						<attribute name="Rotation" value="0.801894 -0.559705 0.171413 0.119643" />
+						<attribute name="Scale" value="1 1 1" />
+						<attribute name="Variables" />
+					</node>
+					<node id="16777413">
+						<attribute name="Is Enabled" value="true" />
+						<attribute name="Name" value="LowerRear" />
+						<attribute name="Tags" />
+						<attribute name="Position" value="0 0 -0" />
+						<attribute name="Rotation" value="0.257055 -0.177105 0.782324 0.539004" />
+						<attribute name="Scale" value="1 1 1" />
+						<attribute name="Variables" />
+					</node>
+				</node>
+			</node>
+		</node>
+		<node id="16777406">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="Center" />
+			<attribute name="Tags" />
+			<attribute name="Position" value="0 3 0" />
+			<attribute name="Rotation" value="1 0 0 0" />
+			<attribute name="Scale" value="1 1 1" />
+			<attribute name="Variables" />
+		</node>
+		<node id="16777407">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="Health" />
+			<attribute name="Tags" />
+			<attribute name="Position" value="0 6 0" />
+			<attribute name="Rotation" value="1 0 0 0" />
+			<attribute name="Scale" value="1 1 1" />
+			<attribute name="Variables" />
+			<component type="BillboardSet" id="16777555">
+				<attribute name="Material" value="Material;Materials/Health.xml" />
+				<attribute name="Fixed Screen Size" value="true" />
+				<attribute name="Billboards">
+					<variant type="Int" value="1" />
+					<variant type="Vector3" value="0 0 0" />
+					<variant type="Vector2" value="50 10" />
+					<variant type="Vector4" value="0 0 1 1" />
+					<variant type="Color" value="1 1 1 1" />
+					<variant type="Float" value="0" />
+					<variant type="Vector3" value="0 1 0" />
+					<variant type="Bool" value="true" />
+				</attribute>
+			</component>
+		</node>
+	</node>
+	<node id="16777434">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="Cuboid" />
+		<attribute name="Tags">
+			<string value="debug" />
+			<string value="player" />
+			<string value="cuboid" />
+		</attribute>
+		<attribute name="Position" value="-4.66107 0 -10" />
+		<attribute name="Rotation" value="1 0 0 0" />
+		<attribute name="Scale" value="1 1 1" />
+		<attribute name="Variables" />
+		<component type="RigidBody" id="16777567">
+			<attribute name="Physics Position" value="-4.66107 0 -10" />
+			<attribute name="Collision Layer" value="5" />
+		</component>
+		<component type="CollisionShape" id="16777568">
+			<attribute name="Size" value="2.5 2.5 2.5" />
+			<attribute name="Offset Position" value="0 3 0" />
+		</component>
+		<component type="ScriptInstance" id="16777569">
+			<attribute name="Delayed Method Calls" value="0" />
+			<attribute name="Script File" value="ScriptFile;Scripts/Selectable.as" />
+			<attribute name="Class Name" value="Selectable" />
+			<attribute name="Script Data" value="77 97 116 101 114 105 97 108 115 47 67 117 98 111 105 100 83 101 108 101 99 116 101 100 46 120 109 108 0 77 97 116 101 114 105 97 108 115 47 67 117 98 111 105 100 85 110 115 101 108 101 99 116 101 100 46 120 109 108 0" />
+			<attribute name="selected_" value="Materials/CuboidSelected.xml" />
+			<attribute name="unselected_" value="Materials/CuboidUnselected.xml" />
+			<attribute name="isSelected_" value="false" />
+		</component>
+		<component type="ScriptInstance" id="16777570">
+			<attribute name="Delayed Method Calls" value="0" />
+			<attribute name="Script File" value="ScriptFile;Scripts/Movable.as" />
+			<attribute name="Class Name" value="Movable" />
+			<attribute name="Script Data" value="0 0 0 64 0 0 64 64 0 0 160 64" />
+			<attribute name="height_" value="2" />
+			<attribute name="maxSpeed_" value="3" />
+			<attribute name="maxAccel_" value="5" />
+			<attribute name="crowdAgent_" value="0" />
+		</component>
+		<component type="CrowdAgent" id="16777571">
+			<attribute name="Target Position" value="2.6901 0.500009 -7.31837" />
+			<attribute name="Requested Target Type" value="Position" />
+			<attribute name="Max Accel" value="5" />
+			<attribute name="Max Speed" value="3" />
+			<attribute name="Height" value="2" />
+		</component>
+		<component type="ScriptInstance" id="16777572">
 			<attribute name="Delayed Method Calls" value="0" />
 			<attribute name="Script File" value="ScriptFile;Scripts/Attacker.as" />
 			<attribute name="Class Name" value="Attacker" />
@@ -377,7 +719,7 @@
 			<attribute name="maxAttackStrength_" value="10" />
 			<attribute name="target_" value="0" />
 		</component>
-		<component type="ScriptInstance" id="16777401">
+		<component type="ScriptInstance" id="16777573">
 			<attribute name="Delayed Method Calls" value="0" />
 			<attribute name="Script File" value="ScriptFile;Scripts/Animated.as" />
 			<attribute name="Class Name" value="Animated" />
@@ -388,7 +730,7 @@
 			<attribute name="attackAnim" value="Models/Cuboid_ArmatureAttack.ani" />
 			<attribute name="dieAnim" value="Models/Cuboid_ArmatureDie.ani" />
 		</component>
-		<node id="16777257">
+		<node id="16777435">
 			<attribute name="Is Enabled" value="true" />
 			<attribute name="Name" value="Model" />
 			<attribute name="Tags" />
@@ -396,7 +738,7 @@
 			<attribute name="Rotation" value="1 0 0 0" />
 			<attribute name="Scale" value="0.01 0.01 0.01" />
 			<attribute name="Variables" />
-			<component type="AnimatedModel" id="16777399">
+			<component type="AnimatedModel" id="16777574">
 				<attribute name="Model" value="Model;Models/Cuboid.mdl" />
 				<attribute name="Material" value="Material;Materials/CuboidUnselected.xml" />
 				<attribute name="Bone Animation Enabled">
@@ -433,12 +775,12 @@
 					<variant type="Int" value="0" />
 				</attribute>
 			</component>
-			<component type="AnimationController" id="16777400">
+			<component type="AnimationController" id="16777575">
 				<attribute name="Node Animation States">
 					<variant type="Int" value="0" />
 				</attribute>
 			</component>
-			<node id="16777258">
+			<node id="16777436">
 				<attribute name="Is Enabled" value="true" />
 				<attribute name="Name" value="Armature" />
 				<attribute name="Tags" />
@@ -446,7 +788,7 @@
 				<attribute name="Rotation" value="0.707107 0.707107 0 0" />
 				<attribute name="Scale" value="100 100 100" />
 				<attribute name="Variables" />
-				<node id="16777259">
+				<node id="16777437">
 					<attribute name="Is Enabled" value="true" />
 					<attribute name="Name" value="Root" />
 					<attribute name="Tags" />
@@ -454,7 +796,7 @@
 					<attribute name="Rotation" value="0.707107 -0.707107 0 0" />
 					<attribute name="Scale" value="1 1 1" />
 					<attribute name="Variables" />
-					<node id="16777260">
+					<node id="16777438">
 						<attribute name="Is Enabled" value="true" />
 						<attribute name="Name" value="AftUpperLeft" />
 						<attribute name="Tags" />
@@ -463,7 +805,7 @@
 						<attribute name="Scale" value="1 1 1" />
 						<attribute name="Variables" />
 					</node>
-					<node id="16777261">
+					<node id="16777439">
 						<attribute name="Is Enabled" value="true" />
 						<attribute name="Name" value="ForwardUpperLeft" />
 						<attribute name="Tags" />
@@ -472,7 +814,7 @@
 						<attribute name="Scale" value="1 1 1" />
 						<attribute name="Variables" />
 					</node>
-					<node id="16777262">
+					<node id="16777440">
 						<attribute name="Is Enabled" value="true" />
 						<attribute name="Name" value="AftUpperRight" />
 						<attribute name="Tags" />
@@ -481,7 +823,7 @@
 						<attribute name="Scale" value="1 1 1" />
 						<attribute name="Variables" />
 					</node>
-					<node id="16777263">
+					<node id="16777441">
 						<attribute name="Is Enabled" value="true" />
 						<attribute name="Name" value="ForwardUpperRight" />
 						<attribute name="Tags" />
@@ -490,7 +832,7 @@
 						<attribute name="Scale" value="1 1 1" />
 						<attribute name="Variables" />
 					</node>
-					<node id="16777264">
+					<node id="16777442">
 						<attribute name="Is Enabled" value="true" />
 						<attribute name="Name" value="AftBottomLeft" />
 						<attribute name="Tags" />
@@ -499,7 +841,7 @@
 						<attribute name="Scale" value="1 1 1" />
 						<attribute name="Variables" />
 					</node>
-					<node id="16777265">
+					<node id="16777443">
 						<attribute name="Is Enabled" value="true" />
 						<attribute name="Name" value="ForwardBottomLeft" />
 						<attribute name="Tags" />
@@ -508,7 +850,7 @@
 						<attribute name="Scale" value="1 1 1" />
 						<attribute name="Variables" />
 					</node>
-					<node id="16777266">
+					<node id="16777444">
 						<attribute name="Is Enabled" value="true" />
 						<attribute name="Name" value="AftBottomRight" />
 						<attribute name="Tags" />
@@ -517,7 +859,7 @@
 						<attribute name="Scale" value="1 1 1" />
 						<attribute name="Variables" />
 					</node>
-					<node id="16777267">
+					<node id="16777445">
 						<attribute name="Is Enabled" value="true" />
 						<attribute name="Name" value="ForwardBottomRight" />
 						<attribute name="Tags" />
@@ -529,7 +871,7 @@
 				</node>
 			</node>
 		</node>
-		<node id="16777294">
+		<node id="16777446">
 			<attribute name="Is Enabled" value="true" />
 			<attribute name="Name" value="Center" />
 			<attribute name="Tags" />
@@ -538,7 +880,7 @@
 			<attribute name="Scale" value="1 1 1" />
 			<attribute name="Variables" />
 		</node>
-		<node id="16777324">
+		<node id="16777447">
 			<attribute name="Is Enabled" value="true" />
 			<attribute name="Name" value="Health" />
 			<attribute name="Tags" />
@@ -546,7 +888,7 @@
 			<attribute name="Rotation" value="1 0 0 0" />
 			<attribute name="Scale" value="1 1 1" />
 			<attribute name="Variables" />
-			<component type="BillboardSet" id="16777472">
+			<component type="BillboardSet" id="16777576">
 				<attribute name="Material" value="Material;Materials/Health.xml" />
 				<attribute name="Fixed Screen Size" value="true" />
 				<attribute name="Billboards">
@@ -562,13 +904,172 @@
 			</component>
 		</node>
 	</node>
-	<node id="16777322">
+	<node id="16777448">
 		<attribute name="Is Enabled" value="true" />
-		<attribute name="Name" value="PlayerSpawn" />
-		<attribute name="Tags" />
-		<attribute name="Position" value="-6.55379 0.518649 -10.2537" />
+		<attribute name="Name" value="Spheroid" />
+		<attribute name="Tags">
+			<string value="debug" />
+			<string value="player" />
+			<string value="spheroid" />
+		</attribute>
+		<attribute name="Position" value="-5 0 0" />
 		<attribute name="Rotation" value="1 0 0 0" />
 		<attribute name="Scale" value="1 1 1" />
 		<attribute name="Variables" />
+		<component type="RigidBody" id="16777577">
+			<attribute name="Physics Position" value="-5 0 0" />
+			<attribute name="Collision Layer" value="5" />
+		</component>
+		<component type="CollisionShape" id="16777578">
+			<attribute name="Size" value="2.5 2.5 2.5" />
+			<attribute name="Offset Position" value="0 3 0" />
+		</component>
+		<component type="ScriptInstance" id="16777579">
+			<attribute name="Delayed Method Calls" value="0" />
+			<attribute name="Script File" value="ScriptFile;Scripts/Selectable.as" />
+			<attribute name="Class Name" value="Selectable" />
+			<attribute name="Script Data" value="77 97 116 101 114 105 97 108 115 47 83 112 104 101 114 111 105 100 83 101 108 101 99 116 101 100 46 120 109 108 0 77 97 116 101 114 105 97 108 115 47 83 112 104 101 114 111 105 100 85 110 115 101 108 101 99 116 101 100 46 120 109 108 0" />
+			<attribute name="selected_" value="Materials/SpheroidSelected.xml" />
+			<attribute name="unselected_" value="Materials/SpheroidUnselected.xml" />
+			<attribute name="isSelected_" value="false" />
+		</component>
+		<component type="ScriptInstance" id="16777580">
+			<attribute name="Delayed Method Calls" value="0" />
+			<attribute name="Script File" value="ScriptFile;Scripts/Movable.as" />
+			<attribute name="Class Name" value="Movable" />
+			<attribute name="Script Data" value="0 0 0 64 0 0 64 64 0 0 160 64" />
+			<attribute name="height_" value="2" />
+			<attribute name="maxSpeed_" value="3" />
+			<attribute name="maxAccel_" value="5" />
+			<attribute name="crowdAgent_" value="0" />
+		</component>
+		<component type="CrowdAgent" id="16777581">
+			<attribute name="Target Position" value="2.6901 0.500009 -7.31837" />
+			<attribute name="Requested Target Type" value="Position" />
+			<attribute name="Max Accel" value="5" />
+			<attribute name="Max Speed" value="3" />
+			<attribute name="Height" value="2" />
+		</component>
+		<component type="ScriptInstance" id="16777582">
+			<attribute name="Delayed Method Calls" value="0" />
+			<attribute name="Script File" value="ScriptFile;Scripts/Attacker.as" />
+			<attribute name="Class Name" value="Attacker" />
+			<attribute name="Script Data" value="112 108 97 121 101 114 0 115 112 104 101 114 111 105 100 0 79 98 106 101 99 116 115 47 66 117 108 108 101 116 46 120 109 108 0 244 1 0 0 0 0 32 65 10 0 0 0 10 0 0 0" />
+			<attribute name="team_" value="player" />
+			<attribute name="type_" value="spheroid" />
+			<attribute name="bullet_" value="Objects/Bullet.xml" />
+			<attribute name="divider_" value="0" />
+			<attribute name="attackDelay_" value="500" />
+			<attribute name="attackRange_" value="10" />
+			<attribute name="attackStrength_" value="10" />
+			<attribute name="maxAttackStrength_" value="10" />
+			<attribute name="target_" value="0" />
+		</component>
+		<component type="ScriptInstance" id="16777583">
+			<attribute name="Delayed Method Calls" value="0" />
+			<attribute name="Script File" value="ScriptFile;Scripts/Animated.as" />
+			<attribute name="Class Name" value="Animated" />
+			<attribute name="Script Data" value="73 100 108 101 0 77 111 100 101 108 115 47 83 112 104 101 114 111 105 100 95 65 114 109 97 116 117 114 101 73 100 108 101 46 97 110 105 0 77 111 100 101 108 115 47 83 112 104 101 114 111 105 100 95 65 114 109 97 116 117 114 101 65 116 116 97 99 107 46 97 110 105 0 77 111 100 101 108 115 47 83 112 104 101 114 111 105 100 95 65 114 109 97 116 117 114 101 68 105 101 46 97 110 105 0" />
+			<attribute name="animController" value="0" />
+			<attribute name="state" value="Idle" />
+			<attribute name="idleAnim" value="Models/Spheroid_ArmatureIdle.ani" />
+			<attribute name="attackAnim" value="Models/Spheroid_ArmatureAttack.ani" />
+			<attribute name="dieAnim" value="Models/Spheroid_ArmatureDie.ani" />
+		</component>
+		<node id="16777449">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="Model" />
+			<attribute name="Tags" />
+			<attribute name="Position" value="0 3 0" />
+			<attribute name="Rotation" value="1 0 0 0" />
+			<attribute name="Scale" value="0.01 0.01 0.01" />
+			<attribute name="Variables" />
+			<component type="AnimatedModel" id="16777584">
+				<attribute name="Model" value="Model;Models/Spheroid.mdl" />
+				<attribute name="Material" value="Material;Materials/SpheroidUnselected.xml" />
+				<attribute name="Bone Animation Enabled">
+					<variant type="Bool" value="true" />
+					<variant type="Bool" value="true" />
+					<variant type="Bool" value="true" />
+					<variant type="Bool" value="true" />
+				</attribute>
+				<attribute name="Animation States">
+					<variant type="Int" value="0" />
+				</attribute>
+			</component>
+			<component type="AnimationController" id="16777585">
+				<attribute name="Node Animation States">
+					<variant type="Int" value="0" />
+				</attribute>
+			</component>
+			<node id="16777450">
+				<attribute name="Is Enabled" value="true" />
+				<attribute name="Name" value="Armature" />
+				<attribute name="Tags" />
+				<attribute name="Position" value="0 0 -0" />
+				<attribute name="Rotation" value="0.707107 0.707107 0 0" />
+				<attribute name="Scale" value="100 100 100" />
+				<attribute name="Variables" />
+				<node id="16777451">
+					<attribute name="Is Enabled" value="true" />
+					<attribute name="Name" value="Root" />
+					<attribute name="Tags" />
+					<attribute name="Position" value="0 0 -0" />
+					<attribute name="Rotation" value="0.5 -0.5 -0.5 -0.5" />
+					<attribute name="Scale" value="1 1 1" />
+					<attribute name="Variables" />
+					<node id="16777452">
+						<attribute name="Is Enabled" value="true" />
+						<attribute name="Name" value="Upper" />
+						<attribute name="Tags" />
+						<attribute name="Position" value="0 0 -0" />
+						<attribute name="Rotation" value="0.707107 -2.66925e-008 -2.66925e-008 0.707107" />
+						<attribute name="Scale" value="1 1 1" />
+						<attribute name="Variables" />
+					</node>
+					<node id="16777453">
+						<attribute name="Is Enabled" value="true" />
+						<attribute name="Name" value="Lower" />
+						<attribute name="Tags" />
+						<attribute name="Position" value="0 0 -0" />
+						<attribute name="Rotation" value="1.64371e-007 0.707107 0.707107 1.10986e-007" />
+						<attribute name="Scale" value="1 1 1" />
+						<attribute name="Variables" />
+					</node>
+				</node>
+			</node>
+		</node>
+		<node id="16777454">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="Center" />
+			<attribute name="Tags" />
+			<attribute name="Position" value="0 3 0" />
+			<attribute name="Rotation" value="1 0 0 0" />
+			<attribute name="Scale" value="1 1 1" />
+			<attribute name="Variables" />
+		</node>
+		<node id="16777455">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="Health" />
+			<attribute name="Tags" />
+			<attribute name="Position" value="0 6 0" />
+			<attribute name="Rotation" value="1 0 0 0" />
+			<attribute name="Scale" value="1 1 1" />
+			<attribute name="Variables" />
+			<component type="BillboardSet" id="16777586">
+				<attribute name="Material" value="Material;Materials/Health.xml" />
+				<attribute name="Fixed Screen Size" value="true" />
+				<attribute name="Billboards">
+					<variant type="Int" value="1" />
+					<variant type="Vector3" value="0 0 0" />
+					<variant type="Vector2" value="50 10" />
+					<variant type="Vector4" value="0 0 1 1" />
+					<variant type="Color" value="1 1 1 1" />
+					<variant type="Float" value="0" />
+					<variant type="Vector3" value="0 1 0" />
+					<variant type="Bool" value="true" />
+				</attribute>
+			</component>
+		</node>
 	</node>
 </scene>

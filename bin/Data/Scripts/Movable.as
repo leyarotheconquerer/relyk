@@ -28,6 +28,7 @@ class Movable : ScriptObject
 		crowdAgent_.height = height_;
 		crowdAgent_.maxSpeed = maxSpeed_;
 		crowdAgent_.maxAccel = maxAccel_;
+		// crowdAgent_.animationEnabled = true;
 	}
 
 	void Save(Serializer& serializer)

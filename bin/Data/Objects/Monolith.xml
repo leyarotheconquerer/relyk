@@ -24,9 +24,9 @@
 		<attribute name="Delayed Method Calls" value="0" />
 		<attribute name="Script File" value="ScriptFile;Scripts/Attackable.as" />
 		<attribute name="Class Name" value="Attackable" />
-		<attribute name="Script Data" value="10 0 0 0 10 0 0 0 100 0 0 0 109 111 110 111 108 105 116 104 0 0" />
-		<attribute name="healthPoints_" value="10" />
-		<attribute name="maxHealthPoints_" value="10" />
+		<attribute name="Script Data" value="244 1 0 0 244 1 0 0 100 0 0 0 109 111 110 111 108 105 116 104 0 0" />
+		<attribute name="healthPoints_" value="500" />
+		<attribute name="maxHealthPoints_" value="500" />
 		<attribute name="scorePoints_" value="100" />
 		<attribute name="team_" value="" />
 		<attribute name="type_" value="monolith" />
@@ -62,6 +62,15 @@
 		<component type="AnimatedModel" id="16777519">
 			<attribute name="Model" value="Model;Models/Monolith.mdl" />
 			<attribute name="Material" value="Material;Materials/Monolith.xml" />
+			<attribute name="Bone Animation Enabled">
+				<variant type="Bool" value="true" />
+				<variant type="Bool" value="true" />
+				<variant type="Bool" value="true" />
+				<variant type="Bool" value="true" />
+				<variant type="Bool" value="true" />
+				<variant type="Bool" value="true" />
+				<variant type="Bool" value="true" />
+			</attribute>
 			<attribute name="Animation States">
 				<variant type="Int" value="0" />
 			</attribute>
@@ -71,6 +80,69 @@
 				<variant type="Int" value="0" />
 			</attribute>
 		</component>
+		<node id="16777384">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="Armature" />
+			<attribute name="Tags" />
+			<attribute name="Position" value="0 0 -0" />
+			<attribute name="Rotation" value="0.707107 0.707107 0 0" />
+			<attribute name="Scale" value="100 100 100" />
+			<attribute name="Variables" />
+			<node id="16777385">
+				<attribute name="Is Enabled" value="true" />
+				<attribute name="Name" value="Center" />
+				<attribute name="Tags" />
+				<attribute name="Position" value="0 0 -0.644673" />
+				<attribute name="Rotation" value="0.707107 -0.707107 0 0" />
+				<attribute name="Scale" value="1 1 1" />
+				<attribute name="Variables" />
+			</node>
+			<node id="16777386">
+				<attribute name="Is Enabled" value="true" />
+				<attribute name="Name" value="AftRight" />
+				<attribute name="Tags" />
+				<attribute name="Position" value="3.62061 -3.70479 -0.461159" />
+				<attribute name="Rotation" value="-0.5 0.5 -0.5 0.5" />
+				<attribute name="Scale" value="1 1 1" />
+				<attribute name="Variables" />
+			</node>
+			<node id="16777387">
+				<attribute name="Is Enabled" value="true" />
+				<attribute name="Name" value="ForRight" />
+				<attribute name="Tags" />
+				<attribute name="Position" value="3.62061 3.55516 -0.461159" />
+				<attribute name="Rotation" value="-0.5 0.5 -0.5 0.5" />
+				<attribute name="Scale" value="1 1 1" />
+				<attribute name="Variables" />
+			</node>
+			<node id="16777388">
+				<attribute name="Is Enabled" value="true" />
+				<attribute name="Name" value="AftLeft" />
+				<attribute name="Tags" />
+				<attribute name="Position" value="-3.676 -3.70479 -0.461159" />
+				<attribute name="Rotation" value="-0.5 0.5 -0.5 0.5" />
+				<attribute name="Scale" value="1 1 1" />
+				<attribute name="Variables" />
+			</node>
+			<node id="16777389">
+				<attribute name="Is Enabled" value="true" />
+				<attribute name="Name" value="ForLeft" />
+				<attribute name="Tags" />
+				<attribute name="Position" value="-3.676 3.55516 -0.461159" />
+				<attribute name="Rotation" value="-0.5 0.5 -0.5 0.5" />
+				<attribute name="Scale" value="1 1 1" />
+				<attribute name="Variables" />
+			</node>
+			<node id="16777390">
+				<attribute name="Is Enabled" value="true" />
+				<attribute name="Name" value="Root" />
+				<attribute name="Tags" />
+				<attribute name="Position" value="0 0 -0.644673" />
+				<attribute name="Rotation" value="0.99765 0.0103455 0.000702277 0.067725" />
+				<attribute name="Scale" value="1 1 1" />
+				<attribute name="Variables" />
+			</node>
+		</node>
 	</node>
 	<node id="16777308">
 		<attribute name="Is Enabled" value="true" />

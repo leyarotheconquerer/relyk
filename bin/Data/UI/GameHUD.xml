@@ -379,7 +379,7 @@
 					<attribute name="Max Anchor" value="0.5 0" />
 					<attribute name="Pivot" value="0.5 0" />
 					<attribute name="Priority" value="1" />
-					<attribute name="Texture" value="Texture2D;Textures/CuboidPreview.png" />
+					<attribute name="Texture" value="Texture2D;Textures/SpheroidPreview.png" />
 					<attribute name="Image Rect" value="0 0 512 512" />
 					<attribute name="Border" value="0 0 0 0" />
 				</element>
@@ -399,7 +399,7 @@
 					<attribute name="Min Anchor" value="0.5 0" />
 					<attribute name="Max Anchor" value="0.5 0" />
 					<attribute name="Pivot" value="0.5 0" />
-					<attribute name="Texture" value="Texture2D;Textures/CuboidPreview.png" />
+					<attribute name="Texture" value="Texture2D;Textures/PyramoidPreview.png" />
 					<attribute name="Image Rect" value="0 0 512 512" />
 					<attribute name="Border" value="0 0 0 0" />
 				</element>

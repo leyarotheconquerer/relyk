@@ -142,6 +142,7 @@ class Attacker : ScriptObject
 			sendData["Attacker"] = node;
 			sendData["Target"] = target_;
 			bullet.SendEvent("BulletFire", sendData);
+			// target_.SendEvent("UnitAttack", sendData);
 			target_ = null;
 		}
 	}

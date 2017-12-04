@@ -1,0 +1,174 @@
+<?xml version="1.0"?>
+<node id="16777249">
+	<attribute name="Is Enabled" value="true" />
+	<attribute name="Name" value="EnemySpheroid" />
+	<attribute name="Tags">
+		<string value="ai" />
+		<string value="debug" />
+	</attribute>
+	<attribute name="Position" value="0 0 10" />
+	<attribute name="Rotation" value="1 0 0 0" />
+	<attribute name="Scale" value="1 1 1" />
+	<attribute name="Variables" />
+	<component type="CrowdAgent" id="16777248" />
+	<component type="RigidBody" id="16777249">
+		<attribute name="Physics Position" value="0 0 10" />
+		<attribute name="Collision Layer" value="4" />
+	</component>
+	<component type="CollisionShape" id="16777250">
+		<attribute name="Size" value="2.5 2.5 2.5" />
+		<attribute name="Offset Position" value="0 3 0" />
+	</component>
+	<component type="ScriptInstance" id="16777251">
+		<attribute name="Delayed Method Calls" value="0" />
+		<attribute name="Script File" value="ScriptFile;Scripts/Movable.as" />
+		<attribute name="Class Name" value="Movable" />
+		<attribute name="Script Data" value="0 0 0 64 0 0 64 64 0 0 160 64" />
+		<attribute name="height_" value="2" />
+		<attribute name="maxSpeed_" value="3" />
+		<attribute name="maxAccel_" value="5" />
+		<attribute name="crowdAgent_" value="0" />
+	</component>
+	<component type="ScriptInstance" id="16777252">
+		<attribute name="Delayed Method Calls" value="0" />
+		<attribute name="Script File" value="ScriptFile;Scripts/Attacker.as" />
+		<attribute name="Class Name" value="Attacker" />
+		<attribute name="Script Data" value="97 105 0 115 112 104 101 114 111 105 100 0 79 98 106 101 99 116 115 47 66 117 108 108 101 116 46 120 109 108 0 244 1 0 0 0 0 32 65 10 0 0 0 10 0 0 0" />
+		<attribute name="team_" value="ai" />
+		<attribute name="type_" value="spheroid" />
+		<attribute name="bullet_" value="Objects/Bullet.xml" />
+		<attribute name="divider_" value="1" />
+		<attribute name="attackDelay_" value="500" />
+		<attribute name="attackRange_" value="10" />
+		<attribute name="attackStrength_" value="10" />
+		<attribute name="maxAttackStrength_" value="10" />
+		<attribute name="target_" value="0" />
+	</component>
+	<component type="ScriptInstance" id="16777253">
+		<attribute name="Delayed Method Calls" value="0" />
+		<attribute name="Script File" value="ScriptFile;Scripts/Attackable.as" />
+		<attribute name="Class Name" value="Attackable" />
+		<attribute name="Script Data" value="200 0 0 0 200 0 0 0 2 0 0 0 115 112 104 101 114 111 105 100 0 97 105 0" />
+		<attribute name="healthPoints_" value="200" />
+		<attribute name="maxHealthPoints_" value="200" />
+		<attribute name="scorePoints_" value="2" />
+		<attribute name="team_" value="ai" />
+		<attribute name="type_" value="spheroid" />
+		<attribute name="healthSize_" value="0" />
+	</component>
+	<component type="ScriptInstance" id="16777254">
+		<attribute name="Delayed Method Calls" value="0" />
+		<attribute name="Script File" value="ScriptFile;Scripts/AI.as" />
+		<attribute name="Class Name" value="AI" />
+		<attribute name="Script Data" value="0 0 16 65 232 3 0 0" />
+		<attribute name="attackRange_" value="9" />
+		<attribute name="tickRate_" value="1000" />
+		<attribute name="monolith_" value="0" />
+	</component>
+	<component type="ScriptInstance" id="16777255">
+		<attribute name="Delayed Method Calls" value="0" />
+		<attribute name="Script File" value="ScriptFile;Scripts/Animated.as" />
+		<attribute name="Class Name" value="Animated" />
+		<attribute name="Script Data" value="73 100 108 101 0 77 111 100 101 108 115 47 83 112 104 101 114 111 105 100 95 65 114 109 97 116 117 114 101 73 100 108 101 46 97 110 105 0 77 111 100 101 108 115 47 83 112 104 101 114 111 105 100 95 65 114 109 97 116 117 114 101 65 116 116 97 99 107 46 97 110 105 0 77 111 100 101 108 115 47 83 112 104 101 114 111 105 100 95 65 114 109 97 116 117 114 101 68 105 101 46 97 110 105 0" />
+		<attribute name="animController" value="0" />
+		<attribute name="state" value="Idle" />
+		<attribute name="idleAnim" value="Models/Spheroid_ArmatureIdle.ani" />
+		<attribute name="attackAnim" value="Models/Spheroid_ArmatureAttack.ani" />
+		<attribute name="dieAnim" value="Models/Spheroid_ArmatureDie.ani" />
+	</component>
+	<node id="16777250">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="Model" />
+		<attribute name="Tags" />
+		<attribute name="Position" value="0 3 0" />
+		<attribute name="Rotation" value="1 0 0 0" />
+		<attribute name="Scale" value="0.01 0.01 0.01" />
+		<attribute name="Variables" />
+		<component type="AnimatedModel" id="16777256">
+			<attribute name="Model" value="Model;Models/Spheroid.mdl" />
+			<attribute name="Material" value="Material;Materials/SpheroidEnemy.xml" />
+			<attribute name="Bone Animation Enabled">
+				<variant type="Bool" value="true" />
+				<variant type="Bool" value="true" />
+				<variant type="Bool" value="true" />
+				<variant type="Bool" value="true" />
+			</attribute>
+			<attribute name="Animation States">
+				<variant type="Int" value="0" />
+			</attribute>
+		</component>
+		<component type="AnimationController" id="16777257">
+			<attribute name="Node Animation States">
+				<variant type="Int" value="0" />
+			</attribute>
+		</component>
+		<node id="16777263">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="Armature" />
+			<attribute name="Tags" />
+			<attribute name="Position" value="0 0 -0" />
+			<attribute name="Rotation" value="0.707107 0.707107 0 0" />
+			<attribute name="Scale" value="100 100 100" />
+			<attribute name="Variables" />
+			<node id="16777264">
+				<attribute name="Is Enabled" value="true" />
+				<attribute name="Name" value="Root" />
+				<attribute name="Tags" />
+				<attribute name="Position" value="0 0 -0" />
+				<attribute name="Rotation" value="0.5 -0.5 -0.5 -0.5" />
+				<attribute name="Scale" value="1 1 1" />
+				<attribute name="Variables" />
+				<node id="16777265">
+					<attribute name="Is Enabled" value="true" />
+					<attribute name="Name" value="Upper" />
+					<attribute name="Tags" />
+					<attribute name="Position" value="0 0 -0" />
+					<attribute name="Rotation" value="0.707107 -2.66925e-008 -2.66925e-008 0.707107" />
+					<attribute name="Scale" value="1 1 1" />
+					<attribute name="Variables" />
+				</node>
+				<node id="16777266">
+					<attribute name="Is Enabled" value="true" />
+					<attribute name="Name" value="Lower" />
+					<attribute name="Tags" />
+					<attribute name="Position" value="0 0 -0" />
+					<attribute name="Rotation" value="1.64371e-007 0.707107 0.707107 1.10986e-007" />
+					<attribute name="Scale" value="1 1 1" />
+					<attribute name="Variables" />
+				</node>
+			</node>
+		</node>
+	</node>
+	<node id="16777261">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="Center" />
+		<attribute name="Tags" />
+		<attribute name="Position" value="0 3 0" />
+		<attribute name="Rotation" value="1 0 0 0" />
+		<attribute name="Scale" value="1 1 1" />
+		<attribute name="Variables" />
+	</node>
+	<node id="16777262">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="Health" />
+		<attribute name="Tags" />
+		<attribute name="Position" value="0 6 0" />
+		<attribute name="Rotation" value="1 0 0 0" />
+		<attribute name="Scale" value="1 1 1" />
+		<attribute name="Variables" />
+		<component type="BillboardSet" id="16777258">
+			<attribute name="Material" value="Material;Materials/Damage.xml" />
+			<attribute name="Fixed Screen Size" value="true" />
+			<attribute name="Billboards">
+				<variant type="Int" value="1" />
+				<variant type="Vector3" value="0 0 0" />
+				<variant type="Vector2" value="50 10" />
+				<variant type="Vector4" value="0 0 1 1" />
+				<variant type="Color" value="1 1 1 1" />
+				<variant type="Float" value="0" />
+				<variant type="Vector3" value="0 1 0" />
+				<variant type="Bool" value="true" />
+			</attribute>
+		</component>
+	</node>
+</node>
